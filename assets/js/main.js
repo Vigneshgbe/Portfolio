@@ -1,103 +1,109 @@
-/*===== MENU SHOW =====*/
-const showMenu = (toggleId, navId) => {
+/*===== MENU SHOW =====*/ 
+const showMenu = (toggleId, navId) =>{
   const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+  nav = document.getElementById(navId)
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
+  if(toggle && nav){
+      toggle.addEventListener('click', ()=>{
+          nav.classList.toggle('show')
+      })
   }
-};
-showMenu("nav-toggle", "nav-menu");
-
-/*===== REMOVE MENU MOBILE =====*/
-const navLink = document.querySelectorAll(".nav__link");
-function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  navMenu.classList.remove("show");
 }
-navLink.forEach((n) => n.addEventListener("click", linkAction));
+showMenu('nav-toggle','nav-menu')
 
-/*===== SCROLL SECTIONS ACTIVE LINK =====*/
-const sections = document.querySelectorAll("section[id]");
-function scrollActive() {
-  const scrollY = window.pageYOffset;
+/*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll('.nav__link')
 
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    const sectionId = current.getAttribute("id");
+function linkAction(){
+  const navMenu = document.getElementById('nav-menu')
+  // When we click on each nav__link, we remove the show-menu class
+  navMenu.classList.remove('show')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
 
-    const link = document.querySelector(
-      `.nav__menu a[href*="${sectionId}"]`
-    );
-    if (link) {
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+  const scrollY = window.pageYOffset
+
+  sections.forEach(current =>{
+      const sectionHeight = current.offsetHeight
+      const sectionTop = current.offsetTop - 50;
+      sectionId = current.getAttribute('id')
+
+      if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+      }else{
+          document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
       }
-    }
-  });
+  })
 }
-window.addEventListener("scroll", scrollActive);
+window.addEventListener('scroll', scrollActive)
 
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
-  origin: "top",
-  distance: "60px",
+  origin: 'top',
+  distance: '60px',
   duration: 2000,
   delay: 200,
-});
-sr.reveal(
-  ".home__data, .about__img, .skills__subtitle, .skills__text",
-  {}
-);
-sr.reveal(
-  ".home__img, .about__subtitle, .about__text, .skills__img",
-  { delay: 400 }
-);
-sr.reveal(".home__social-icon", { interval: 200 });
-sr.reveal(".skills__data, .work__img, .contact__input", {
-  interval: 200,
+//     reset: true
 });
 
-/*===== SLIDER SCRIPT =====*/
-document.addEventListener("DOMContentLoaded", function () {
-  const sliders = {
-    project: {
-      track: document.getElementById("project-slider"),
-      cards: document.querySelectorAll("#project-slider > div"),
-      index: 0,
-    },
-    certificate: {
-      track: document.getElementById("certificate-slider"),
-      cards: document.querySelectorAll("#certificate-slider > div"),
-      index: 0,
-    },
-  };
+sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
+sr.reveal('.home__social-icon',{ interval: 200}); 
+sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
-  function slide(target, direction) {
-    const slider = sliders[target];
-    const visibleCount = Math.floor(slider.track.offsetWidth / slider.cards[0].offsetWidth);
-    const maxIndex = slider.cards.length - visibleCount;
+/*=====DOWNLOAD BUTTON ANIMATION ====== */
 
-    if (direction === "next") {
-      slider.index = slider.index >= maxIndex ? 0 : slider.index + 1;
-    } else {
-      slider.index = slider.index <= 0 ? maxIndex : slider.index - 1;
-    }
+/*--===== CERTIFICATES SLIDER SCRIPT =====--*/
+const track = document.getElementById("sliderTrack");
+const certificates = document.querySelectorAll(".certification");
+let index = 0;
+const visibleCards = 3;
+const total = certificates.length;
+const speed = 5000; // in milliseconds
 
-    const offset = -(slider.index * (slider.cards[0].offsetWidth + 20));
-    slider.track.style.transform = `translateX(${offset}px)`;
-  }
+// Clone first few elements to make infinite loop effect
+for (let i = 0; i < visibleCards; i++) {
+const clone = certificates[i].cloneNode(true);
+track.appendChild(clone);
+}
 
-  document.querySelectorAll(".slider-btn").forEach(btn => {
-    btn.addEventListener("click", function () {
-      const target = btn.getAttribute("data-target");
-      const direction = btn.classList.contains("next") ? "next" : "prev";
-      slide(target, direction);
-    });
-  });
-});
+function nextSlide() {
+index++;
+track.style.transition = 'transform 0.5s ease-in-out';
+track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
+
+if (index >= total) {
+  setTimeout(() => {
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(0)';
+    index = 0;
+  }, 500);
+}
+}
+
+function prevSlide() {
+if (index === 0) {
+  index = total;
+  track.style.transition = 'none';
+  track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
+  setTimeout(() => {
+    index--;
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
+  }, 20);
+} else {
+  index--;
+  track.style.transition = 'transform 0.5s ease-in-out';
+  track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
+}
+}
+
+let autoSlide = setInterval(nextSlide, speed);
+
+// Pause on hover
+track.addEventListener("mouseenter", () => clearInterval(autoSlide));
+track.addEventListener("mouseleave", () => autoSlide = setInterval(nextSlide, speed));
