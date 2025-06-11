@@ -58,48 +58,52 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 /*=====DOWNLOAD BUTTON ANIMATION ====== */
 
 /*--===== CERTIFICATES SLIDER SCRIPT =====--*/
-const track = document.querySelector('.slider-track');
-const items = document.querySelectorAll('.certificate-item');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
+const track = document.getElementById("sliderTrack");
+const certificates = document.querySelectorAll(".certification");
+let index = 0;
+const visibleCards = 3;
+const total = certificates.length;
+const speed = 5000; // in milliseconds
 
-let index = 1;
-const itemWidth = items[0].offsetWidth;
-let interval = setInterval(() => moveSlide(1), 5000);
+// Clone first few elements to make infinite loop effect
+for (let i = 0; i < visibleCards; i++) {
+  const clone = certificates[i].cloneNode(true);
+  track.appendChild(clone);
+}
 
-function moveSlide(step) {
-  index += step;
+function nextSlide() {
+  index++;
   track.style.transition = 'transform 0.5s ease-in-out';
-  track.style.transform = `translateX(-${itemWidth * index}px)`;
+  track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
+
+  if (index >= total) {
+    setTimeout(() => {
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(0)';
+      index = 0;
+    }, 500);
+  }
 }
 
-track.addEventListener('transitionend', () => {
-  if (index === items.length - 1) {
-    track.style.transition = 'none';
-    index = 1;
-    track.style.transform = `translateX(-${itemWidth * index}px)`;
-  }
+function prevSlide() {
   if (index === 0) {
+    index = total;
     track.style.transition = 'none';
-    index = items.length - 2;
-    track.style.transform = `translateX(-${itemWidth * index}px)`;
+    track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
+    setTimeout(() => {
+      index--;
+      track.style.transition = 'transform 0.5s ease-in-out';
+      track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
+    }, 20);
+  } else {
+    index--;
+    track.style.transition = 'transform 0.5s ease-in-out';
+    track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
   }
-});
-
-nextBtn.addEventListener('click', () => {
-  moveSlide(1);
-  resetInterval();
-});
-prevBtn.addEventListener('click', () => {
-  moveSlide(-1);
-  resetInterval();
-});
-
-function resetInterval() {
-  clearInterval(interval);
-  interval = setInterval(() => moveSlide(1), 5000);
 }
 
-window.addEventListener('load', () => {
-  track.style.transform = `translateX(-${itemWidth * index}px)`;
-});
+let autoSlide = setInterval(nextSlide, speed);
+
+// Pause on hover
+track.addEventListener("mouseenter", () => clearInterval(autoSlide));
+track.addEventListener("mouseleave", () => autoSlide = setInterval(nextSlide, speed));

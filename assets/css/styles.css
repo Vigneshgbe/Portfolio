@@ -737,98 +737,115 @@ img {
 /* ===== CERTIFICATES SECTION ===== */
 #certificate {
   padding: 60px 20px;
-  background-color: #f8f9fa;
   text-align: center;
 }
+
+#certificate h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#certificate h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #4169e1;
+  margin: 10px auto 0;
+}
+
 .slider-container {
   position: relative;
   overflow: hidden;
-  max-width: 1000px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 .slider-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-.certificate-item {
+
+.certification {
   flex: 0 0 33.3333%;
-  padding: 10px;
   box-sizing: border-box;
-  position: relative;
-  max-height: 240px;
+  padding: 10px;
 }
-.certificate-item img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(20, 30, 48, 0.9);
-  color: #fff;
+
+.certification-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  height: 280px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: 0.3s;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
 }
-.certificate-item:hover .overlay {
-  opacity: 1;
+
+.certification-card:hover {
+  transform: scale(1.03);
 }
-.overlay h3 {
-  font-size: 18px;
-  margin: 0;
+
+.certification-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
 }
-.overlay p {
-  font-size: 14px;
-  margin-top: 10px;
+
+.certification-card h3 {
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 600;
 }
-.certificate-icons {
-  margin-top: 10px;
-}
-.certificate-icon {
-  color: #f3fe90;
-  font-size: 24px;
-  transition: color 0.3s ease;
-}
-.certificate-icon:hover {
-  color: #fbff00;
-}
-.slider-btn {
+
+.nav-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.6);
   border: none;
-  color: white;
-  font-size: 24px;
+  color: #fff;
+  padding: 12px 16px;
   cursor: pointer;
-  padding: 10px;
+  font-size: 20px;
   z-index: 10;
+  border-radius: 4px;
+  transition: background 0.3s;
 }
-.prev-btn {
-  left: 0;
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
-.next-btn {
-  right: 0;
+
+.nav-prev {
+  left: -25px;
 }
+
+.nav-next {
+  right: -25px;
+}
+
 @media screen and (max-width: 768px) {
-  .certificate-item {
+  .certification {
     flex: 0 0 100%;
   }
-  .slider-btn {
-    font-size: 20px;
-    padding: 5px;
+
+  .nav-prev, .nav-next {
+    left: 10px;
+    right: 10px;
+  }
+
+  .nav-prev {
+    left: 5px;
+  }
+
+  .nav-next {
+    right: 5px;
   }
 }
 
