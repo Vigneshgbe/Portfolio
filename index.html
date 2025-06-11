@@ -299,29 +299,29 @@
             </div>
           </section>
 
-       <!--===== CONTACT =====-->
+        <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
             <h2 class="section-title">Get in Touch</h2>
-        
+            
             <div class="contact__container">
-            <form id="contact-form" class="contact__form">
-                <div class="input-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required />
-                </div>
-                <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required />
-                </div>
-                <div class="input-group">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="contact__button">Send Message</button>
-            </form>
-            <p id="status-message" style="text-align: center; margin-top: 10px;"></p>
+                <form id="contact-form" class="contact__form">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required placeholder="Enter your full name" />
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required placeholder="Enter your email address" />
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="5" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="contact__button">Send Message</button>
+                </form>
+                <p id="status-message"></p>
             </div>
-        </section>
+        </section>    
   
     </main>
 
@@ -339,7 +339,7 @@
                 <a href="https://vickystft.blogspot.com" class="footer__icon"><i class='bx bxl-blogger'></i></a>
                 <a href="https://www.youtube.com/@Graduate-Hands" class="footer__icon"><i class='bx bxl-youtube'></i></a>
             </div>
-        <p class="footer__copy">All rigths reserved &#169; Vignesh G 2024.</p>
+        <p class="footer__copy">All rigths reserved &#169; Vignesh G 2025.</p>
     </footer>
 
     <!-- Add this in your HTML head or before closing body tag -->
@@ -355,150 +355,252 @@
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/404.js"></script>
 
-    <script>// ===== EMAIL SENDING FUNCTIONALITY =====
-
-        emailjs.init('k8KwtfQBBcnzZ9Ijv');
+    <script>
+        // ===== EMAIL SENDING FUNCTIONALITY - ENHANCED VERSION =====
         
-        // Get DOM elements
-        const contactForm = document.getElementById('contact-form');
-        const statusMessage = document.getElementById('status-message');
-        const submitButton = contactForm.querySelector('.contact__button');
+        // Initialize EmailJS with your public key
+        (function() {
+            emailjs.init('k8KwtfQBBcnzZ9Ijv'); // Replace with your actual public key
+        })();
         
-        // Function to display status messages
-        function showStatusMessage(message, type) {
-            statusMessage.textContent = message;
-            statusMessage.style.display = 'block';
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get DOM elements with better error handling
+            const contactForm = document.getElementById('contact-form');
+            const statusMessage = document.getElementById('status-message');
             
-            // Style based on message type
-            if (type === 'success') {
-                statusMessage.style.color = '#28a745';
-                statusMessage.style.backgroundColor = '#d4edda';
-                statusMessage.style.border = '1px solid #c3e6cb';
-            } else if (type === 'error') {
-                statusMessage.style.color = '#dc3545';
-                statusMessage.style.backgroundColor = '#f8d7da';
-                statusMessage.style.border = '1px solid #f5c6cb';
-            } else if (type === 'loading') {
-                statusMessage.style.color = '#856404';
-                statusMessage.style.backgroundColor = '#fff3cd';
-                statusMessage.style.border = '1px solid #ffeaa7';
-            }
-            
-            // Add padding and border radius for better styling
-            statusMessage.style.padding = '10px';
-            statusMessage.style.borderRadius = '5px';
-            statusMessage.style.marginTop = '15px';
-        }
-        
-        // Function to reset form and status
-        function resetFormState() {
-            submitButton.disabled = false;
-            submitButton.textContent = 'Send Message';
-        }
-        
-        // Function to set loading state
-        function setLoadingState() {
-            submitButton.disabled = true;
-            submitButton.textContent = 'Sending...';
-            showStatusMessage('⏳ Sending your message...', 'loading');
-        }
-        
-        // Handle form submission
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Set loading state
-            setLoadingState();
-            
-            // Get form data
-            const formData = {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Validate form data (optional additional validation)
-            if (!formData.from_name.trim() || !formData.from_email.trim() || !formData.message.trim()) {
-                showStatusMessage('❌ Please fill in all fields.', 'error');
-                resetFormState();
+            if (!contactForm) {
+                console.error('Contact form not found!');
                 return;
             }
             
-            // Send email using EmailJS
-            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service and template IDs
-            emailjs.send('portfolio', 'portfolio_contactus', formData)
-                .then(function(response) {
-                    console.log('Email sent successfully!', response.status, response.text);
-                    showStatusMessage('✅ Message sent successfully! Thank you for getting in touch.', 'success');
+            if (!statusMessage) {
+                console.error('Status message element not found!');
+                return;
+            }
+            
+            const submitButton = contactForm.querySelector('.contact__button');
+            
+            if (!submitButton) {
+                console.error('Submit button not found!');
+                return;
+            }
+            
+            // Function to display status messages
+            function showStatusMessage(message, type) {
+                statusMessage.textContent = message;
+                statusMessage.style.display = 'block';
+                
+                // Remove existing classes
+                statusMessage.className = '';
+                
+                // Style based on message type
+                if (type === 'success') {
+                    statusMessage.style.color = '#155724';
+                    statusMessage.style.backgroundColor = '#d4edda';
+                    statusMessage.style.border = '1px solid #c3e6cb';
+                } else if (type === 'error') {
+                    statusMessage.style.color = '#721c24';
+                    statusMessage.style.backgroundColor = '#f8d7da';
+                    statusMessage.style.border = '1px solid #f5c6cb';
+                } else if (type === 'loading') {
+                    statusMessage.style.color = '#856404';
+                    statusMessage.style.backgroundColor = '#fff3cd';
+                    statusMessage.style.border = '1px solid #ffeaa7';
+                }
+            }
+            
+            // Function to hide status message
+            function hideStatusMessage() {
+                statusMessage.style.display = 'none';
+            }
+            
+            // Function to reset form and status
+            function resetFormState() {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            }
+            
+            // Function to set loading state
+            function setLoadingState() {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+                showStatusMessage('⏳ Sending your message...', 'loading');
+            }
+            
+            // Function to validate email
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Function to validate form
+            function validateForm(formData) {
+                const errors = [];
+                
+                if (!formData.name || formData.name.trim().length < 2) {
+                    errors.push('Name must be at least 2 characters long');
+                }
+                
+                if (!formData.email || !isValidEmail(formData.email)) {
+                    errors.push('Please enter a valid email address');
+                }
+                
+                if (!formData.message || formData.message.trim().length < 10) {
+                    errors.push('Message must be at least 10 characters long');
+                }
+                
+                return errors;
+            }
+            
+            // Function to get form data
+            function getFormData() {
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+                
+                if (!nameInput || !emailInput || !messageInput) {
+                    throw new Error('Form inputs not found');
+                }
+                
+                return {
+                    name: nameInput.value.trim(),
+                    email: emailInput.value.trim(),
+                    message: messageInput.value.trim()
+                };
+            }
+            
+            // Handle form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                try {
+                    // Get form data
+                    const formData = getFormData();
                     
-                    // Reset form
-                    contactForm.reset();
-                    
-                    // Hide status message after 5 seconds
-                    setTimeout(() => {
-                        statusMessage.style.display = 'none';
-                    }, 5000);
-                })
-                .catch(function(error) {
-                    console.error('Email sending failed:', error);
-                    
-                    // Handle different error types
-                    let errorMessage = '❌ Failed to send message. ';
-                    
-                    if (error.status === 400) {
-                        errorMessage += 'Please check the form data and try again.';
-                    } else if (error.status === 401) {
-                        errorMessage += 'Authentication failed. Please contact the site administrator.';
-                    } else if (error.status === 404) {
-                        errorMessage += 'Email service not found. Please contact the site administrator.';
-                    } else if (error.status === 429) {
-                        errorMessage += 'Too many requests. Please try again later.';
-                    } else {
-                        errorMessage += 'Please try again later or contact us directly.';
+                    // Validate form
+                    const validationErrors = validateForm(formData);
+                    if (validationErrors.length > 0) {
+                        showStatusMessage('❌ ' + validationErrors.join('. '), 'error');
+                        return;
                     }
                     
-                    showStatusMessage(errorMessage, 'error');
-                })
-                .finally(function() {
-                    // Reset button state
+                    // Set loading state
+                    setLoadingState();
+                    
+                    // Get current date and time
+                    const now = new Date();
+                    const submittedDate = now.toLocaleDateString();
+                    const submittedTime = now.toLocaleTimeString();
+                    
+                    // Prepare template parameters for EmailJS
+                    const templateParams = {
+                        // Primary fields
+                        from_name: formData.name,
+                        from_email: formData.email,
+                        message: formData.message,
+                        
+                        // Alternative naming (in case your template uses different names)
+                        user_name: formData.name,
+                        user_email: formData.email,
+                        user_message: formData.message,
+                        name: formData.name,
+                        email: formData.email,
+                        reply_to: formData.email,
+                        
+                        // Timestamp
+                        submitted_date: submittedDate,
+                        submitted_time: submittedTime,
+                        submission_datetime: `${submittedDate} at ${submittedTime}`
+                    };
+                    
+                    console.log('Sending email with params:', templateParams);
+                    
+                    // Send email using EmailJS
+                    emailjs.send('portfolio', 'portfolio_contactus', templateParams)
+                        .then(function(response) {
+                            console.log('SUCCESS!', response.status, response.text);
+                            showStatusMessage('✅ Message sent successfully! Thank you for getting in touch.', 'success');
+                            
+                            // Reset form
+                            contactForm.reset();
+                            
+                            // Hide status message after 5 seconds
+                            setTimeout(hideStatusMessage, 5000);
+                        })
+                        .catch(function(error) {
+                            console.error('FAILED...', error);
+                            
+                            let errorMessage = '❌ Failed to send message. ';
+                            
+                            if (error.status) {
+                                switch (error.status) {
+                                    case 400:
+                                        errorMessage += 'Invalid request. Please check your input.';
+                                        break;
+                                    case 401:
+                                        errorMessage += 'Authentication failed.';
+                                        break;
+                                    case 404:
+                                        errorMessage += 'Service not found.';
+                                        break;
+                                    case 429:
+                                        errorMessage += 'Too many requests. Please try again later.';
+                                        break;
+                                    default:
+                                        errorMessage += 'Please try again later.';
+                                }
+                            } else {
+                                errorMessage += 'Please check your connection and try again.';
+                            }
+                            
+                            showStatusMessage(errorMessage, 'error');
+                        })
+                        .finally(function() {
+                            resetFormState();
+                        });
+                        
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    showStatusMessage('❌ An error occurred. Please try again.', 'error');
                     resetFormState();
-                });
-        });
-        
-        // Optional: Add input validation feedback
-        const inputs = contactForm.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('blur', function() {
-                if (this.hasAttribute('required') && !this.value.trim()) {
-                    this.style.borderColor = '#dc3545';
-                } else {
-                    this.style.borderColor = '#ddd';
                 }
             });
             
-            input.addEventListener('focus', function() {
-                this.style.borderColor = '#007bff';
+            // Input validation and styling
+            const inputs = contactForm.querySelectorAll('input, textarea');
+            
+            inputs.forEach(input => {
+                // Focus styling
+                input.addEventListener('focus', function() {
+                    this.classList.remove('input-error');
+                    hideStatusMessage();
+                });
+                
+                // Blur validation
+                input.addEventListener('blur', function() {
+                    if (this.hasAttribute('required') && !this.value.trim()) {
+                        this.classList.add('input-error');
+                    } else if (this.type === 'email' && this.value && !isValidEmail(this.value)) {
+                        this.classList.add('input-error');
+                    } else {
+                        this.classList.remove('input-error');
+                        this.classList.add('input-success');
+                    }
+                });
+                
+                // Clear error styling on input
+                input.addEventListener('input', function() {
+                    this.classList.remove('input-error');
+                    if (statusMessage.style.display === 'block') {
+                        hideStatusMessage();
+                    }
+                });
             });
+            
+            console.log('Contact form initialized successfully');
         });
-        
-        // Optional: Email validation
-        const emailInput = document.getElementById('email');
-        emailInput.addEventListener('blur', function() {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (this.value && !emailRegex.test(this.value)) {
-                this.style.borderColor = '#dc3545';
-                showStatusMessage('⚠️ Please enter a valid email address.', 'error');
-            }
-        });
-        
-        // Clear status message when user starts typing again
-        inputs.forEach(input => {
-            input.addEventListener('input', function() {
-                if (statusMessage.style.display === 'block' && statusMessage.style.color === '#dc3545') {
-                    statusMessage.style.display = 'none';
-                }
-            });
-        });</script>
+    </script>
       
 </body>
 </html>

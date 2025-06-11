@@ -1,3 +1,50 @@
+/*- THIS CONTACT FORM CODE -*/
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const button = this.querySelector('.contact__button');
+  const statusMessage = document.getElementById('status-message');
+  
+  // Add loading state
+  button.classList.add('loading');
+  button.textContent = 'Sending...';
+  
+  // Simulate form submission
+  setTimeout(() => {
+      button.classList.remove('loading');
+      button.textContent = 'Send Message';
+      
+      statusMessage.textContent = 'Thank you! Your message has been sent successfully.';
+      statusMessage.className = 'success';
+      
+      // Reset form
+      this.reset();
+      
+      // Hide message after 5 seconds
+      setTimeout(() => {
+          statusMessage.style.display = 'none';
+      }, 5000);
+  }, 2000);
+});
+
+// Real-time validation
+const inputs = document.querySelectorAll('input, textarea');
+inputs.forEach(input => {
+  input.addEventListener('blur', function() {
+      if (this.checkValidity()) {
+          this.classList.remove('invalid');
+          this.classList.add('valid');
+      } else {
+          this.classList.remove('valid');
+          this.classList.add('invalid');
+      }
+  });
+
+  input.addEventListener('input', function() {
+      this.classList.remove('invalid', 'valid');
+  });
+});
+
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
   const toggle = document.getElementById(toggleId),
