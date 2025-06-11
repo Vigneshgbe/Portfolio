@@ -343,6 +343,8 @@ img {
 .section {
   padding: 4rem 1rem;
   background-color: #f9f9f9;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .container {
@@ -351,53 +353,47 @@ img {
 }
 
 /*===== ABOUT SECTION =====*/
-.about__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  justify-content: center;
-  text-align: left;
-}
-
-.about__img img {
-  width: 220px;
-  border-radius: 0.75rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-.about__content {
-  flex: 1 1 400px;
-  max-width: 600px;
-}
-
-.about__title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #003366;
-  margin-bottom: 1rem;
+.about__container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 1rem;
 }
 
 .about__text {
   font-size: 1rem;
-  line-height: 1.7;
   color: #444;
-  margin-bottom: 1.5rem;
+  line-height: 1.8;
   text-align: justify;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.about__wrapper {
+  padding-bottom: 0rem; 
+  margin-bottom: 0rem;    
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .about__text {
+    font-size: 0.95rem;
+  }
 }
 
 /*===== WHY CHOOSE ME =====*/
 .why__wrapper {
   text-align: center;
-  max-width: 780px;
+  max-width: 880px;
   margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
 }
 
 .why__title {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #1c1c1c;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .why__title span {
@@ -405,13 +401,14 @@ img {
 }
 
 .why__text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #444;
-  line-height: 1.8;
+  line-height: 1.9;
   margin-bottom: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
-/*===== CTA BUTTON (from your palette) =====*/
 .btn404 {
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
@@ -430,28 +427,20 @@ img {
   transform: translateY(-2px);
 }
 
-/*===== RESPONSIVE =====*/
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .about__wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about__content {
-    text-align: center;
-  }
-
-  .about__title {
-    font-size: 1.5rem;
-  }
-
   .why__title {
-    font-size: 1.6rem;
+    font-size: 2rem;
+  }
+
+  .why__text {
+    font-size: 1rem;
+    text-align: left;
+    padding: 0 0.5rem;
   }
 }
 
 /* ===== SKILLS =====*/
-
 .skill-section {
   margin-bottom: 40px;
   text-align: center;
