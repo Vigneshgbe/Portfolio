@@ -519,102 +519,102 @@ img {
   }
 }
 
-/*======== EDUCATION ========*/
+/*========= EDUCATION SECTION =========*/
 .education {
-  padding: 80px 0;
-  background-color: #f8f9fa;
+  background: #f8f9fb;
+  padding: 4rem 1.5rem;
   text-align: center;
 }
 
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #1c1c1c;
+}
+
 .education__container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  gap: 2rem;
   justify-content: center;
-  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.education__item {
-  width: calc(50% - 20px);
-  max-width: 400px;
-  transition: transform 0.3s ease;
-}
-
-.education__item:hover {
-  transform: translateY(-10px);
-}
-
-.education__content {
+.education__card {
   background-color: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
-  position: relative;
+  width: 100%;
+  max-width: 480px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.education__content:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.education__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .education__image {
   width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
+  height: 240px;
+  object-fit: cover;
 }
 
-.education__details {
-  padding: 20px;
-  margin-top: -30px;
+.education__content {
+  padding: 1.5rem 1.25rem;
 }
 
-.education__title {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
+.education__degree {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.5rem;
 }
 
-.education__info {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 5px;
+.education__school {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
 }
 
-.education__description {
-  font-size: 16px;
+.education__duration,
+.education__grade {
+  font-size: 0.95rem;
   color: #777;
-  line-height: 1.6;
+  margin-bottom: 0.2rem;
 }
-/* Mobile-Specific Adjustments */
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .education {
-    padding: 30px 15px;
+    padding: 2.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
   }
 
   .education__container {
-    gap: 15px; /* Reduced gap on smaller screens */
+    gap: 1.2rem;
   }
 
-  .education__item {
-    width: 90%; /* Adjusted width for better alignment */
-    max-width: none;
+  .education__degree {
+    font-size: 1.1rem;
   }
 
-  .education__title {
-    font-size: 1.6rem;
-  }
-
-  .education__info,
-  .education__description {
+  .education__school,
+  .education__duration,
+  .education__grade {
     font-size: 0.9rem;
   }
 }
 
 
 /*======== PROJECTS =========*/
-
 .projects-container {
   display: flex;
   flex-wrap: wrap;
