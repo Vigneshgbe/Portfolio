@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Test Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            width: 100%;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status.loading {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        .debug-info {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .debug-info h3 {
+            margin-top: 0;
+            color: #495057;
+        }
+        
+        .debug-info code {
+            background: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 EmailJS Contact Form Test</h1>
+        
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="from_name">Your Name</label>
+                <input type="text" id="from_name" name="from_name" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+                <label for="from_email">Your Email</label>
+                <input type="email" id="from_email" name="from_email" required placeholder="your@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+            </div>
+            
+            <button type="submit" id="submit-btn">Send Test Email</button>
+        </form>
+        
+        <div id="status" class="status" style="display: none;"></div>
+        
+        <div class="debug-info">
+            <h3>🔍 Debug Information</h3>
+            <p><strong>EmailJS Configuration:</strong></p>
+            <ul>
+                <li>Public Key: <code>k8KwtfQBBcnzZ9Ijv</code></li>
+                <li>Service ID: <code>portfolio</code></li>
+                <li>Template ID: <code>portfolio_contactus</code></li>
+            </ul>
+            
+            <p><strong>To make this work:</strong></p>
+            <ol>
+                <li>Create an EmailJS account at <a href="https://emailjs.com" target="_blank">emailjs.com</a></li>
+                <li>Set up an email service (Gmail, Outlook, etc.)</li>
+                <li>Create a template with variables: <code>{{from_name}}</code>, <code>{{from_email}}</code>, <code>{{message}}</code></li>
+                <li>Configure your admin email as the recipient</li>
+                <li>Update the public key if needed</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your public key
+        emailjs.init('k8KwtfQBBcnzZ9Ijv');
+        
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('status');
+        const submitBtn = document.getElementById('submit-btn');
+        
+        function showStatus(message, type) {
+            status.textContent = message;
+            status.className = `status ${type}`;
+            status.style.display = 'block';
+        }
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Disable submit button and show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            showStatus('⏳ Sending your message...', 'loading');
+            
+            // Send email using EmailJS
+            emailjs.sendForm('portfolio', 'portfolio_contactus', form)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    showStatus('✅ Message sent successfully! Check your EmailJS dashboard.', 'success');
+                    form.reset();
+                })
+                .catch(function(error) {
+                    console.error('FAILED...', error);
+                    
+                    let errorMessage = '❌ Failed to send message. ';
+                    if (error.status === 400) {
+                        errorMessage += 'Please check your EmailJS configuration.';
+                    } else if (error.status === 401) {
+                        errorMessage += 'Invalid public key or service ID.';
+                    } else if (error.status === 404) {
+                        errorMessage += 'Template not found.';
+                    } else {
+                        errorMessage += 'Please try again later.';
+                    }
+                    
+                    showStatus(errorMessage, 'error');
+                })
+                .finally(function() {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Test Email';
+                });
+        });
+    </script>
+</body>
+</html>

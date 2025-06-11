@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
     <!-- <link rel="stylesheet" href="assets/css/extras.css"> -->
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -300,7 +299,7 @@
             </div>
           </section>
 
-        <!--===== CONTACT =====-->
+       <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
             <h2 class="section-title">Get in Touch</h2>
         
@@ -323,7 +322,7 @@
             <p id="status-message" style="text-align: center; margin-top: 10px;"></p>
             </div>
         </section>
-        
+  
     </main>
 
     <!--===== FOOTER =====-->
@@ -343,37 +342,163 @@
         <p class="footer__copy">All rigths reserved &#169; Vignesh G 2024.</p>
     </footer>
 
+    <!-- Add this in your HTML head or before closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- jQuery before any scripts using it -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     <!--===== MAIN JS =====-->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/404.js"></script>
 
-    <script>
-        // Initialize EmailJS
-        (function () {
-          emailjs.init("k8KwtfQBBcnzZ9Ijv"); // Public Key
-        })();
-      
-        // Form submission handler
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-          e.preventDefault();
-          document.getElementById("status-message").innerText = "Sending...";
-      
-          emailjs.sendForm("portfolio", "Yportfolio_contactus", this).then(
-            function () {
-              document.getElementById("status-message").innerText = "Message sent successfully!";
-              document.getElementById("contact-form").reset();
-            },
-            function (error) {
-              document.getElementById("status-message").innerText = "Failed to send. Try again later.";
-              console.error("EmailJS Error:", error);
-            }
-          );
-        });
-      </script>
-</body>
+    <script>// ===== EMAIL SENDING FUNCTIONALITY =====
 
+        emailjs.init('k8KwtfQBBcnzZ9Ijv');
+        
+        // Get DOM elements
+        const contactForm = document.getElementById('contact-form');
+        const statusMessage = document.getElementById('status-message');
+        const submitButton = contactForm.querySelector('.contact__button');
+        
+        // Function to display status messages
+        function showStatusMessage(message, type) {
+            statusMessage.textContent = message;
+            statusMessage.style.display = 'block';
+            
+            // Style based on message type
+            if (type === 'success') {
+                statusMessage.style.color = '#28a745';
+                statusMessage.style.backgroundColor = '#d4edda';
+                statusMessage.style.border = '1px solid #c3e6cb';
+            } else if (type === 'error') {
+                statusMessage.style.color = '#dc3545';
+                statusMessage.style.backgroundColor = '#f8d7da';
+                statusMessage.style.border = '1px solid #f5c6cb';
+            } else if (type === 'loading') {
+                statusMessage.style.color = '#856404';
+                statusMessage.style.backgroundColor = '#fff3cd';
+                statusMessage.style.border = '1px solid #ffeaa7';
+            }
+            
+            // Add padding and border radius for better styling
+            statusMessage.style.padding = '10px';
+            statusMessage.style.borderRadius = '5px';
+            statusMessage.style.marginTop = '15px';
+        }
+        
+        // Function to reset form and status
+        function resetFormState() {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message';
+        }
+        
+        // Function to set loading state
+        function setLoadingState() {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            showStatusMessage('⏳ Sending your message...', 'loading');
+        }
+        
+        // Handle form submission
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Set loading state
+            setLoadingState();
+            
+            // Get form data
+            const formData = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Validate form data (optional additional validation)
+            if (!formData.from_name.trim() || !formData.from_email.trim() || !formData.message.trim()) {
+                showStatusMessage('❌ Please fill in all fields.', 'error');
+                resetFormState();
+                return;
+            }
+            
+            // Send email using EmailJS
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service and template IDs
+            emailjs.send('portfolio', 'portfolio_contactus', formData)
+                .then(function(response) {
+                    console.log('Email sent successfully!', response.status, response.text);
+                    showStatusMessage('✅ Message sent successfully! Thank you for getting in touch.', 'success');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Hide status message after 5 seconds
+                    setTimeout(() => {
+                        statusMessage.style.display = 'none';
+                    }, 5000);
+                })
+                .catch(function(error) {
+                    console.error('Email sending failed:', error);
+                    
+                    // Handle different error types
+                    let errorMessage = '❌ Failed to send message. ';
+                    
+                    if (error.status === 400) {
+                        errorMessage += 'Please check the form data and try again.';
+                    } else if (error.status === 401) {
+                        errorMessage += 'Authentication failed. Please contact the site administrator.';
+                    } else if (error.status === 404) {
+                        errorMessage += 'Email service not found. Please contact the site administrator.';
+                    } else if (error.status === 429) {
+                        errorMessage += 'Too many requests. Please try again later.';
+                    } else {
+                        errorMessage += 'Please try again later or contact us directly.';
+                    }
+                    
+                    showStatusMessage(errorMessage, 'error');
+                })
+                .finally(function() {
+                    // Reset button state
+                    resetFormState();
+                });
+        });
+        
+        // Optional: Add input validation feedback
+        const inputs = contactForm.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    this.style.borderColor = '#dc3545';
+                } else {
+                    this.style.borderColor = '#ddd';
+                }
+            });
+            
+            input.addEventListener('focus', function() {
+                this.style.borderColor = '#007bff';
+            });
+        });
+        
+        // Optional: Email validation
+        const emailInput = document.getElementById('email');
+        emailInput.addEventListener('blur', function() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (this.value && !emailRegex.test(this.value)) {
+                this.style.borderColor = '#dc3545';
+                showStatusMessage('⚠️ Please enter a valid email address.', 'error');
+            }
+        });
+        
+        // Clear status message when user starts typing again
+        inputs.forEach(input => {
+            input.addEventListener('input', function() {
+                if (statusMessage.style.display === 'block' && statusMessage.style.color === '#dc3545') {
+                    statusMessage.style.display = 'none';
+                }
+            });
+        });</script>
+      
+</body>
 </html>
