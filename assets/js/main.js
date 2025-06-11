@@ -110,7 +110,7 @@ const certificates = document.querySelectorAll(".certification");
 let index = 0;
 const visibleCards = 3;
 const total = certificates.length;
-const speed = 5000; // in milliseconds
+const speed = 3000; // in milliseconds
 
 // Clone first few elements to make infinite loop effect
 for (let i = 0; i < visibleCards; i++) {
