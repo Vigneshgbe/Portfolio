@@ -354,7 +354,7 @@
     <script>
         // Initialize EmailJS
         (function () {
-          emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your Public Key
+          emailjs.init("k8KwtfQBBcnzZ9Ijv"); // Public Key
         })();
       
         // Form submission handler
@@ -362,7 +362,7 @@
           e.preventDefault();
           document.getElementById("status-message").innerText = "Sending...";
       
-          emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
+          emailjs.sendForm("portfolio", "Yportfolio_contactus", this).then(
             function () {
               document.getElementById("status-message").innerText = "Message sent successfully!";
               document.getElementById("contact-form").reset();
