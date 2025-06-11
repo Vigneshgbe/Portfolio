@@ -56,3 +56,50 @@ sr.reveal('.home__social-icon',{ interval: 200});
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
 /*=====DOWNLOAD BUTTON ANIMATION ====== */
+
+/*--===== CERTIFICATES SLIDER SCRIPT =====--*/
+const track = document.querySelector('.slider-track');
+const items = document.querySelectorAll('.certificate-item');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let index = 1;
+const itemWidth = items[0].offsetWidth;
+let interval = setInterval(() => moveSlide(1), 5000);
+
+function moveSlide(step) {
+  index += step;
+  track.style.transition = 'transform 0.5s ease-in-out';
+  track.style.transform = `translateX(-${itemWidth * index}px)`;
+}
+
+track.addEventListener('transitionend', () => {
+  if (index === items.length - 1) {
+    track.style.transition = 'none';
+    index = 1;
+    track.style.transform = `translateX(-${itemWidth * index}px)`;
+  }
+  if (index === 0) {
+    track.style.transition = 'none';
+    index = items.length - 2;
+    track.style.transform = `translateX(-${itemWidth * index}px)`;
+  }
+});
+
+nextBtn.addEventListener('click', () => {
+  moveSlide(1);
+  resetInterval();
+});
+prevBtn.addEventListener('click', () => {
+  moveSlide(-1);
+  resetInterval();
+});
+
+function resetInterval() {
+  clearInterval(interval);
+  interval = setInterval(() => moveSlide(1), 5000);
+}
+
+window.addEventListener('load', () => {
+  track.style.transform = `translateX(-${itemWidth * index}px)`;
+});
