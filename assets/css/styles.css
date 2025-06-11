@@ -850,141 +850,93 @@ img {
 }
 
 /* ===== CONTACT =====*/
-/* adding contact form style*/
 .contact {
-  background-color: #f8f9fa;
-  padding: 80px 0;
+  background: #f9fafc;
+  padding: 80px 20px;
 }
 
 .contact__container {
   max-width: 600px;
   margin: 0 auto;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #222;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .contact__form {
-  display: grid;
-  grid-gap: 20px;
-  flex: 1;
-  max-width: 600px;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.contact__input,
-.contact__textarea {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #444;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 14px 16px;
+  border: 1px solid #d0d7de;
+  border-radius: 10px;
   font-size: 16px;
-  transition: border-color 0.1s ease;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.contact__input:focus,
-.contact__textarea:focus {
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #007aff;
   outline: none;
-  border-color: #4dabf7;
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
 }
 
 .contact__button {
-  display: inline-block;
   padding: 15px 30px;
-  background: linear-gradient(45deg, #00b5ff, #005eff);
+  background: linear-gradient(135deg, #007aff, #0051ff);
   color: #fff;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
   text-transform: uppercase;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: box-shadow 0.3s, transform 0.3s;
-  margin: 3px;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.contact__button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(100%) rotateX(90deg);
-  transition: transform 0.3s ease-in-out;
-}
-
-.contact__button:hover::before {
-  transform: translateY(0) rotateX(0);
-}
-
-.contact__button::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
-  border-radius: 15px;
-  border: 1px solid #00b5ff;
-  z-index: -1;
-}
-
-/* Hover Effect */
 .contact__button:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #0051ff, #003ecb);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 81, 255, 0.2);
 }
 
-/* Active Effect */
 .contact__button:active {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(0.95);
+  transform: scale(0.97);
+  box-shadow: none;
 }
 
-.contact__button:hover {
-  background-color: #0056b3;
-}
-
-/* Media Queries for Responsive Design */
-@media screen and (max-width: 768px) {
+@media (max-width: 600px) {
   .contact__container {
-    padding: 0 20px;
-    /* Add some horizontal padding to adjust for smaller screens */
-  }
-
-  .contact__form {
-    grid-gap: 15px;
-    /* Adjust the gap between form elements */
-  }
-
-  .contact__button {
-    width: 100%;
-    /* Make the button full width on smaller screens */
+    padding: 30px 20px;
   }
 }
-
-/*======= NEW CONTACT PAGE CHATGPT ========*/
-/*
-.contact__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-}
-
-.contact__input,
-.contact__button {
-  width: 100%;
-  padding: 15px;
-  border: 2px solid #007bff;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-*/
 
 /* ===== FOOTER =====*/
 .footer {

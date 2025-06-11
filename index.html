@@ -302,20 +302,28 @@
 
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
-
-            <div class="contact__container bd-grid">
-                <!-- Contact form -->
-                <form action="mailto:vigneshgbecse@gmail.com" method="POST" class="contact__form">
-                    <input type="text" name="name" placeholder="Name" class="contact__input" required>
-                    <input type="email" name="email" placeholder="Email" class="contact__input" required>
-                    <textarea name="message" cols="30" rows="10" class="contact__input" placeholder="Message"
-                        required></textarea>
-                    <button type="submit" class="contact__button button">Send Message</button>
-                </form>
+            <h2 class="section-title">Get in Touch</h2>
+        
+            <div class="contact__container">
+            <form id="contact-form" class="contact__form">
+                <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+                </div>
+                <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+                </div>
+                <div class="input-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="contact__button">Send Message</button>
+            </form>
+            <p id="status-message" style="text-align: center; margin-top: 10px;"></p>
             </div>
-
         </section>
+        
     </main>
 
     <!--===== FOOTER =====-->
@@ -337,10 +345,35 @@
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <!--===== MAIN JS =====-->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/404.js"></script>
+
+    <script>
+        // Initialize EmailJS
+        (function () {
+          emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your Public Key
+        })();
+      
+        // Form submission handler
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("status-message").innerText = "Sending...";
+      
+          emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
+            function () {
+              document.getElementById("status-message").innerText = "Message sent successfully!";
+              document.getElementById("contact-form").reset();
+            },
+            function (error) {
+              document.getElementById("status-message").innerText = "Failed to send. Try again later.";
+              console.error("EmailJS Error:", error);
+            }
+          );
+        });
+      </script>
 </body>
 
 </html>
