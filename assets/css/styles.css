@@ -337,28 +337,112 @@ img {
     flex-direction: column;
     padding-top: 2rem;
   }
-}
+} 
 
 /* ===== ABOUT =====*/
 .about__container {
-  row-gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background-color: #f9fbfe;
+  flex-wrap: wrap;
+}
+
+.about__image {
+  flex: 1;
   text-align: center;
 }
 
-.about__subtitle {
-  margin-bottom: var(--mb-2);
-  color: #667EEA;
+.about__portrait {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-.about__img {
-  justify-self: center;
+.about__content {
+  flex: 2;
+  text-align: left;
 }
 
-.about__img img {
-  width: 200px;
-  border-radius: .5rem;
+.about__title {
+  font-size: 2rem;
+  color: #1f3c88;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
+.about__description {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #0066ff, #0033cc);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 51, 204, 0.3);
+  transition: background 0.3s ease;
+}
+.btn-primary:hover {
+  background: #002db3;
+}
+
+.why__container {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.why__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+}
+.why__title span {
+  color: #0066ff;
+}
+
+.why__description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, #00b894, #00cec9);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 206, 201, 0.3);
+  transition: background 0.3s ease;
+}
+.btn-secondary:hover {
+  background: #00bfa6;
+}
+
+@media (max-width: 768px) {
+  .about__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about__content {
+    text-align: center;
+  }
+}
 /* ===== SKILLS =====*/
 
 .skill-section {
