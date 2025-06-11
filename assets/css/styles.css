@@ -440,48 +440,83 @@ img {
   }
 }
 
-/* ===== SKILLS =====*/
-.skill-section {
-  margin-bottom: 40px;
+/* ===== SKILLS SECTION ===== */
+.skills {
+  padding: 3rem 1.5rem;
+  background-color: #f8f9fb;
   text-align: center;
 }
 
-.skill-title {
-  font-size: 24px;
-  margin-bottom: 20px;
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1c1c1c;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.skills-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.skill-section {
+  margin-bottom: 2rem;
 }
 
 .skill-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .skill-item {
-  width: 100px;
-  height: 100px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
-  background-image: linear-gradient(90deg, #fcfcfc 0%, #ebebeb 100%);
-  /* Bright yellow */
+  background-image: linear-gradient(90deg, #ffffff 0%, #f0f0f0 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, background 0.3s ease;
   cursor: pointer;
   overflow: hidden;
 }
 
 .skill-item:hover {
   transform: scale(1.1);
-  background-image: linear-gradient(90deg, #fcfcfc 0%, #ebebeb 10%);
-  /* Bright orange */
+  background-image: linear-gradient(90deg, #eef7ff 0%, #ddeeff 100%);
 }
 
 .skill-icon {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-subtitle {
+    font-size: 1rem;
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-item {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 /*======== EDUCATION ========*/
