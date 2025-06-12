@@ -105,55 +105,143 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 /*=====DOWNLOAD BUTTON ANIMATION ====== */
 
 /*--===== CERTIFICATES SLIDER SCRIPT =====--*/
-const track = document.getElementById("sliderTrack");
-const certificates = document.querySelectorAll(".certification");
-let index = 0;
-const visibleCards = 3;
-const total = certificates.length;
-const speed = 3000; // in milliseconds
+let currentSlide = 0;
+        let totalSlides = 8; // Original slides count
+        let visibleSlides = 3; // Number of slides visible at once
+        let totalSlidesWithClones = 11; // Including clones
+        let certInterval;
 
-// Clone first few elements to make infinite loop effect
-for (let i = 0; i < visibleCards; i++) {
-const clone = certificates[i].cloneNode(true);
-track.appendChild(clone);
-}
+        const sliderTrack = document.getElementById('sliderTrack');
+        const certIndicators = document.querySelectorAll('.cert-indicator');
 
-function nextSlide() {
-index++;
-track.style.transition = 'transform 0.5s ease-in-out';
-track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
+        // Initialize auto-play
+        function startAutoPlay() {
+            certInterval = setInterval(() => {
+                nextSlide();
+            }, 2000);
+        }
 
-if (index >= total) {
-  setTimeout(() => {
-    track.style.transition = 'none';
-    track.style.transform = 'translateX(0)';
-    index = 0;
-  }, 500);
-}
-}
+        // Stop auto-play
+        function stopAutoPlay() {
+            clearInterval(certInterval);
+        }
 
-function prevSlide() {
-if (index === 0) {
-  index = total;
-  track.style.transition = 'none';
-  track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
-  setTimeout(() => {
-    index--;
-    track.style.transition = 'transform 0.5s ease-in-out';
-    track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
-  }, 20);
-} else {
-  index--;
-  track.style.transition = 'transform 0.5s ease-in-out';
-  track.style.transform = `translateX(-${(100 / visibleCards) * index}%)`;
-}
-}
+        // Update slider position
+        function updateSlider() {
+            const translateX = -currentSlide * 33.3333; // Move by one slide (33.3333%)
+            sliderTrack.style.transform = `translateX(${translateX}%)`;
+            
+            // Update indicators (only for original slides)
+            let indicatorIndex = currentSlide;
+            if (currentSlide >= totalSlides) {
+                indicatorIndex = currentSlide - totalSlides;
+            }
+            
+            certIndicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === indicatorIndex);
+            });
+        }
 
-let autoSlide = setInterval(nextSlide, speed);
+        // Next slide with infinite loop
+        function nextSlide() {
+            currentSlide++;
+            updateSlider();
+            
+            // If we've moved past the original slides, reset to beginning
+            if (currentSlide >= totalSlides) {
+                setTimeout(() => {
+                    sliderTrack.classList.add('no-transition');
+                    currentSlide = currentSlide - totalSlides;
+                    updateSlider();
+                    
+                    // Re-enable transition after reset
+                    setTimeout(() => {
+                        sliderTrack.classList.remove('no-transition');
+                    }, 50);
+                }, 800); // Wait for transition to complete
+            }
+        }
 
-// Pause on hover
-track.addEventListener("mouseenter", () => clearInterval(autoSlide));
-track.addEventListener("mouseleave", () => autoSlide = setInterval(nextSlide, speed));
+        // Previous slide
+        function prevSlide() {
+            if (currentSlide === 0) {
+                // Jump to equivalent position in cloned section
+                sliderTrack.classList.add('no-transition');
+                currentSlide = totalSlides;
+                updateSlider();
+                
+                setTimeout(() => {
+                    sliderTrack.classList.remove('no-transition');
+                    currentSlide = totalSlides - 1;
+                    updateSlider();
+                }, 50);
+            } else {
+                currentSlide--;
+                updateSlider();
+            }
+        }
+
+        // Go to specific slide
+        function goToCertSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateSlider();
+            
+            // Restart auto-play timer when manually navigating
+            stopAutoPlay();
+            startAutoPlay();
+        }
+
+        // Pause auto-play on hover for better UX
+        const certContainer = document.querySelector('.slider-container');
+        certContainer.addEventListener('mouseenter', () => {
+            stopAutoPlay();
+        });
+
+        certContainer.addEventListener('mouseleave', () => {
+            startAutoPlay();
+        });
+
+        // Initialize the slider
+        document.addEventListener('DOMContentLoaded', () => {
+            updateSlider();
+            startAutoPlay();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+                stopAutoPlay();
+                startAutoPlay();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+                stopAutoPlay();
+                startAutoPlay();
+            }
+        });
+
+        // Handle responsive behavior
+        function handleResize() {
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                // On mobile, show 1 slide at a time
+                document.querySelectorAll('.certification').forEach(cert => {
+                    cert.style.flex = '0 0 100%';
+                });
+                visibleSlides = 1;
+            } else {
+                // On desktop, show 3 slides at a time
+                document.querySelectorAll('.certification').forEach(cert => {
+                    cert.style.flex = '0 0 33.3333%';
+                });
+                visibleSlides = 3;
+            }
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', handleResize);
+        handleResize(); 
+        
 
  /*-- ===== ACHIEVEMENTS SECTION ===== --*/
  let currentAchievementSlide = 0;
