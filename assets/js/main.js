@@ -118,7 +118,7 @@ let currentSlide = 0;
         function startAutoPlay() {
             certInterval = setInterval(() => {
                 nextSlide();
-            }, 2000);
+            }, 3000);
         }
 
         // Stop auto-play
@@ -246,7 +246,7 @@ let currentSlide = 0;
  /*-- ===== ACHIEVEMENTS SECTION ===== --*/
  let currentAchievementSlide = 0;
         let totalAchievementSlides = 3; // Original slides count
-        let totalSlidesWithClone = 3; // Including clone
+        let totalSlidesWithClone = 4; // Including clone
         let achievementInterval;
 
         const achievementSliderTrack = document.getElementById('achievementsSliderTrack');
@@ -256,7 +256,7 @@ let currentSlide = 0;
         function startAutoPlay() {
             achievementInterval = setInterval(() => {
                 nextAchievement();
-            }, 3000);
+            }, 4000);
         }
 
         // Stop auto-play
