@@ -157,8 +157,8 @@ track.addEventListener("mouseleave", () => autoSlide = setInterval(nextSlide, sp
 
  /*-- ===== ACHIEVEMENTS SECTION ===== --*/
  let currentAchievementSlide = 0;
-        let totalAchievementSlides = 5; // Original slides count
-        let totalSlidesWithClone = 6; // Including clone
+        let totalAchievementSlides = 3; // Original slides count
+        let totalSlidesWithClone = 3; // Including clone
         let achievementInterval;
 
         const achievementSliderTrack = document.getElementById('achievementsSliderTrack');
