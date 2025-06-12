@@ -575,7 +575,7 @@ img {
     font-size: 1rem;
   }
   .hero-image img {
-    width: 85%;
+    width: 100%;
   }
   .hero-container {
     flex-direction: column;
@@ -1288,8 +1288,6 @@ img {
   background: #6c7ae0;
 }
 
-
-
 @media screen and (max-width: 768px) {
   #achievements {
       padding: 40px 15px;
@@ -1304,7 +1302,7 @@ img {
   }
 
   .achievement-card img {
-      height: 230px;
+      height: 350px;
   }
 
   .achievements-nav-button {
@@ -1495,11 +1493,26 @@ section.contact,
 }
 
 /* Responsive Design */
+/* Desktop form width - only for larger screens */
+.contact form,
+.contact__form form {
+  width: 60% !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 1200px) {
   .contact .bd-grid,
   .contact .container,
   .contact__container {
     padding: 0 30px !important;
+  }
+  
+  .contact form,
+  .contact__form form {
+    width: 70% !important;
+    max-width: 700px !important;
   }
 }
 
@@ -1512,6 +1525,12 @@ section.contact,
   
   .contact__form {
     padding: 2.5rem !important;
+  }
+  
+  .contact form,
+  .contact__form form {
+    width: 85% !important;
+    max-width: 600px !important;
   }
 }
 
@@ -1531,6 +1550,13 @@ section.contact,
     padding: 2rem !important;
     border-radius: 15px !important;
   }
+  
+  /* Mobile form width - much wider for better usability */
+  .contact form,
+  .contact__form form {
+    width: 95% !important;
+    max-width: none !important;
+  }
 
   .contact .section-title {
     font-size: 2rem !important;
@@ -1542,15 +1568,17 @@ section.contact,
   .contact__form input[type="text"],
   .contact__form input[type="email"],
   .contact__form textarea {
-    padding: 0.875rem 1rem !important;
+    padding: 1rem 1.25rem !important;
     font-size: 1rem !important;
+    min-height: 50px !important;
   }
 
   .contact__form .contact__button,
   .contact__form button,
   .contact__form input[type="submit"] {
-    padding: 0.875rem 1.5rem !important;
-    font-size: 1rem !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    min-height: 50px !important;
   }
 }
 
@@ -1570,6 +1598,13 @@ section.contact,
     padding: 1.5rem !important;
     border-radius: 12px !important;
   }
+  
+  /* Extra small mobile - nearly full width */
+  .contact form,
+  .contact__form form {
+    width: 98% !important;
+    max-width: none !important;
+  }
 
   .contact .section-title {
     font-size: 1.75rem !important;
@@ -1580,28 +1615,41 @@ section.contact,
   .contact__form input[type="text"],
   .contact__form input[type="email"],
   .contact__form textarea {
-    padding: 0.75rem !important;
+    padding: 0.875rem 1rem !important;
     font-size: 0.95rem !important;
+    min-height: 48px !important;
   }
 
   .contact__form .contact__button,
   .contact__form button,
   .contact__form input[type="submit"] {
-    padding: 0.75rem 1rem !important;
-    font-size: 0.95rem !important;
+    padding: 0.875rem 1rem !important;
+    font-size: 1rem !important;
+    min-height: 48px !important;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 360px) {
+  .contact .bd-grid,
+  .contact .container,
+  .contact__container {
+    padding: 0 8px !important;
+  }
+  
+  .contact__form {
+    padding: 1.25rem !important;
+  }
+  
+  .contact form,
+  .contact__form form {
+    width: 100% !important;
   }
 }
 
 /* Force override any grid or flexbox constraints */
 .contact * {
   box-sizing: border-box !important;
-}
-
-/* Additional overrides for common conflicting styles */
-.contact form,
-.contact__form form {
-  width: 60% !important;
-  max-width: none !important;
 }
 
 /* Override any inherited width from parent elements */
