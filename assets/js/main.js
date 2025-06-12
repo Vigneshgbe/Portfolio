@@ -154,3 +154,114 @@ let autoSlide = setInterval(nextSlide, speed);
 // Pause on hover
 track.addEventListener("mouseenter", () => clearInterval(autoSlide));
 track.addEventListener("mouseleave", () => autoSlide = setInterval(nextSlide, speed));
+
+ /*-- ===== ACHIEVEMENTS SECTION ===== --*/
+ let currentAchievementSlide = 0;
+        let totalAchievementSlides = 5; // Original slides count
+        let totalSlidesWithClone = 6; // Including clone
+        let achievementInterval;
+
+        const achievementSliderTrack = document.getElementById('achievementsSliderTrack');
+        const achievementIndicators = document.querySelectorAll('.indicator');
+
+        // Initialize auto-play
+        function startAutoPlay() {
+            achievementInterval = setInterval(() => {
+                nextAchievement();
+            }, 3000);
+        }
+
+        // Stop auto-play
+        function stopAutoPlay() {
+            clearInterval(achievementInterval);
+        }
+
+        // Update slider position
+        function updateAchievementSlider() {
+            const translateX = -currentAchievementSlide * 100;
+            achievementSliderTrack.style.transform = `translateX(${translateX}%)`;
+            
+            // Update indicators (only for original slides)
+            const indicatorIndex = currentAchievementSlide >= totalAchievementSlides ? 0 : currentAchievementSlide;
+            achievementIndicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === indicatorIndex);
+            });
+        }
+
+        // Next slide with infinite loop
+        function nextAchievement() {
+            currentAchievementSlide++;
+            updateAchievementSlider();
+            
+            // If we're at the clone (index 5), reset to slide 1 without transition
+            if (currentAchievementSlide === totalSlidesWithClone) {
+                setTimeout(() => {
+                    achievementSliderTrack.classList.add('no-transition');
+                    currentAchievementSlide = 0;
+                    updateAchievementSlider();
+                    
+                    // Re-enable transition after reset
+                    setTimeout(() => {
+                        achievementSliderTrack.classList.remove('no-transition');
+                    }, 50);
+                }, 800); // Wait for transition to complete
+            }
+        }
+
+        // Previous slide
+        function prevAchievement() {
+            if (currentAchievementSlide === 0) {
+                // Jump to clone position without transition, then go to last slide
+                achievementSliderTrack.classList.add('no-transition');
+                currentAchievementSlide = totalAchievementSlides;
+                updateAchievementSlider();
+                
+                setTimeout(() => {
+                    achievementSliderTrack.classList.remove('no-transition');
+                    currentAchievementSlide = totalAchievementSlides - 1;
+                    updateAchievementSlider();
+                }, 50);
+            } else {
+                currentAchievementSlide--;
+                updateAchievementSlider();
+            }
+        }
+
+        // Go to specific slide
+        function goToSlide(slideIndex) {
+            currentAchievementSlide = slideIndex;
+            updateAchievementSlider();
+            
+            // Restart auto-play timer when manually navigating
+            stopAutoPlay();
+            startAutoPlay();
+        }
+
+        // Pause auto-play on hover for better UX
+        const achievementContainer = document.querySelector('.achievements-slider-container');
+        achievementContainer.addEventListener('mouseenter', () => {
+            stopAutoPlay();
+        });
+
+        achievementContainer.addEventListener('mouseleave', () => {
+            startAutoPlay();
+        });
+
+        // Initialize the slider
+        document.addEventListener('DOMContentLoaded', () => {
+            updateAchievementSlider();
+            startAutoPlay();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevAchievement();
+                stopAutoPlay();
+                startAutoPlay();
+            } else if (e.key === 'ArrowRight') {
+                nextAchievement();
+                stopAutoPlay();
+                startAutoPlay();
+            }
+        });
