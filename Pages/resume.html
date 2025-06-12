@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
 
     <!-- =====BOX ICONS===== -->
@@ -14,6 +13,186 @@
     <title>Resume</title>
     <link rel="icon" type="image/png" href="/assets/img/pro.png">
 </head>
+<style>
+    /* ===== DOWNLOAD BUTTON STYLES ===== */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.button {
+    position: relative;
+    background: linear-gradient(135deg, #4169e1, #6c7ae0);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 25px rgba(65, 105, 225, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    min-width: 250px;
+    font-family: inherit;
+}
+
+/* Hover Effects */
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(65, 105, 225, 0.4);
+    background: linear-gradient(135deg, #3557d1, #5c6ad0);
+}
+
+/* Active/Click Effect */
+.button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(65, 105, 225, 0.35);
+}
+
+/* Ripple Effect */
+.button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.button:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Download Icon */
+.button::after {
+    content: '⬇';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.button:hover::after {
+    transform: translateY(-50%) translateY(2px);
+    animation: bounce 1s infinite;
+}
+
+/* Bounce animation for download icon */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(-50%) translateY(0);
+    }
+    40% {
+        transform: translateY(-50%) translateY(3px);
+    }
+    60% {
+        transform: translateY(-50%) translateY(1px);
+    }
+}
+
+/* Focus state for accessibility */
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.4);
+}
+
+/* Loading state (optional - for future use) */
+.button.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.button.loading::after {
+    content: '⟳';
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: translateY(-50%) rotate(0deg); }
+    to { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .button-container {
+        padding: 30px 15px;
+    }
+    
+    .button {
+        padding: 14px 28px;
+        font-size: 16px;
+        min-width: 220px;
+    }
+    
+    .button::after {
+        right: 16px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button {
+        padding: 12px 24px;
+        font-size: 14px;
+        min-width: 200px;
+        letter-spacing: 0.5px;
+    }
+    
+    .button::after {
+        right: 14px;
+        font-size: 12px;
+    }
+}
+
+/* Alternative Button Styles (uncomment to use) */
+
+/* 
+// Flat Modern Style
+.button-flat {
+    background: #4169e1;
+    border-radius: 8px;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+.button-flat:hover {
+    background: #3557d1;
+    transform: none;
+    box-shadow: 0 2px 8px rgba(65, 105, 225, 0.3);
+}
+*/
+
+/* 
+// Outline Style
+.button-outline {
+    background: transparent;
+    color: #4169e1;
+    border: 2px solid #4169e1;
+    box-shadow: none;
+}
+
+.button-outline:hover {
+    background: #4169e1;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(65, 105, 225, 0.3);
+}
+*/
+</style>
 
 <body>
     <!--===== HEADER =====-->
@@ -50,13 +229,13 @@
         <!-- PDF Container -->
         <div id="pdfContainer">
             <!-- PDF will be embedded here -->
-            <iframe id="embeddedPDF" src="1zU6tSgnhKZEgrKnZqXDsTKR1bzH81-5L" width="100%" height="1080px" frameborder="0"></iframe>
+            <iframe id="embeddedPDF" src="1tDXNHvciNflZKAwEau80xad9oXaFAK2B" width="100%" height="1080px" frameborder="0"></iframe>
         </div>
 
         <!-- Script to set the embedded PDF source -->
         <script>
             // Google Drive embeddable link for the PDF
-            var embeddableLink = "https://drive.google.com/file/d/1zU6tSgnhKZEgrKnZqXDsTKR1bzH81-5L/preview"; // Replace YOUR_PDF_FILE_ID with the actual PDF File ID
+            var embeddableLink = "https://drive.google.com/file/d/1tDXNHvciNflZKAwEau80xad9oXaFAK2B/preview"; // Replace YOUR_PDF_FILE_ID with the actual PDF File ID
 
             // Set the embedded PDF source
             document.getElementById("embeddedPDF").src = embeddableLink;
@@ -73,7 +252,7 @@
     <script>
         document.getElementById("downloadButton").addEventListener("click", function () {
             var link = document.createElement("a");
-            link.href = "https://drive.google.com/file/d/1zU6tSgnhKZEgrKnZqXDsTKR1bzH81-5L/view?usp=sharing"; // Replace "your_file_url" with the actual URL of the file you want to download
+            link.href = "https://drive.google.com/file/d/1tDXNHvciNflZKAwEau80xad9oXaFAK2B/view?usp=sharing"; // Replace "your_file_url" with the actual URL of the file you want to download
             link.download = "Resume"; // Optional: Set the filename for the downloaded file
             link.click();
         });
