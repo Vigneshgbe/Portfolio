@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Resume</title>
+    <link rel="icon" type="image/png" href="/assets/img/pro.png">
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html" class="nav__logo">G VIGNESH</a>
+            </div>
+
+          <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="/index.html#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="/index.html#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="/index.html#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="/index.html#education" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="/index.html#work" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="/index.html#certificate" class="nav__link">Certificates</li>
+                    <li class="nav__item"><a href="/index.html#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="/pages/resume.html" class="nav__link">Resume</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--===== HOME =====-->
+    <section class="about section " id="about">
+        <br />
+        <h2 class="section-title">My Resume</h2>
+
+        <!-- PDF Container -->
+        <div id="pdfContainer">
+            <!-- PDF will be embedded here -->
+            <iframe id="embeddedPDF" src="1zU6tSgnhKZEgrKnZqXDsTKR1bzH81-5L" width="100%" height="1080px" frameborder="0"></iframe>
+        </div>
+
+        <!-- Script to set the embedded PDF source -->
+        <script>
+            // Google Drive embeddable link for the PDF
+            var embeddableLink = "https://drive.google.com/file/d/1zU6tSgnhKZEgrKnZqXDsTKR1bzH81-5L/preview"; // Replace YOUR_PDF_FILE_ID with the actual PDF File ID
+
+            // Set the embedded PDF source
+            document.getElementById("embeddedPDF").src = embeddableLink;
+        </script>
+
+
+    </section>
+
+
+    <!--===== DOWNLOAD BUTTON =====-->
+    <div class="button-container" class="wrap">
+        <button id="downloadButton" class="button">Download My Resume</button>
+    </div>
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function () {
+            var link = document.createElement("a");
+            link.href = "https://drive.google.com/file/d/1zU6tSgnhKZEgrKnZqXDsTKR1bzH81-5L/view?usp=sharing"; // Replace "your_file_url" with the actual URL of the file you want to download
+            link.download = "Resume"; // Optional: Set the filename for the downloaded file
+            link.click();
+        });
+    </script>
+
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <h2 class="footer__title">Get in Touch</h2>
+        <div class="footer__social">
+            <a href="https://www.pinterest.com/vigneshgbe/" class="footer__icon"><i class='bx bxl-pinterest'></i></a>
+                <a href="https://github.com/Sweety-Vigneshg" class="footer__icon"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/vigneshgbe/" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+                <!-- <a href="https://vickystft.blogspot.com" class="footer__icon"><i class='bx bxl-twitter'></i></a> -->
+                <a href="http://wa.me/918525822546" class="footer__icon"><i class='bx bxl-whatsapp'></i></a>
+                <!-- <a href="https://facebook.com/vickystft_official" class="footer__icon"><i class='bx bxl-facebook'></i></a> -->
+                <a href="https://instagram.com/vicky_vigneshg" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+                <a href="https://vickystft.blogspot.com" class="footer__icon"><i class='bx bxl-blogger'></i></a>
+                <!-- <a href="https://www.youtube.com/@Graduate-Hands" class="footer__icon"><i class='bx bxl-youtube'></i></a> -->
+              </div>
+        <p class="footer__copy">All rigths reserved &#169; Vignesh G 2025.</p>
+    </footer>
+
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
