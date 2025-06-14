@@ -46,61 +46,68 @@ inputs.forEach(input => {
 });
 
 /*===== MENU SHOW =====*/ 
- // Mobile menu functionality
+ // Get DOM elements
  const navToggle = document.getElementById('nav-toggle');
  const navMenu = document.getElementById('nav-menu');
  const navClose = document.getElementById('nav-close');
  const menuBackdrop = document.getElementById('menu-backdrop');
  const navLinks = document.querySelectorAll('.nav__link');
+ const body = document.body;
 
- // Function to show menu
+ // Show menu
  function showMenu() {
      navMenu.classList.add('show');
      menuBackdrop.classList.add('show');
-     document.body.classList.add('menu-open');
+     body.classList.add('menu-open');
  }
 
- // Function to hide menu
+ // Hide menu
  function hideMenu() {
      navMenu.classList.remove('show');
      menuBackdrop.classList.remove('show');
-     document.body.classList.remove('menu-open');
+     body.classList.remove('menu-open');
  }
 
- // Show menu when toggle is clicked
+ // Toggle menu when hamburger button is clicked
  if (navToggle) {
      navToggle.addEventListener('click', showMenu);
  }
 
- // Hide menu when close button is clicked
+ // Close menu when close button is clicked
  if (navClose) {
      navClose.addEventListener('click', hideMenu);
  }
 
- // Hide menu when backdrop is clicked
+ // Close menu when backdrop is clicked
  if (menuBackdrop) {
      menuBackdrop.addEventListener('click', hideMenu);
  }
 
- // Hide menu when a nav link is clicked (mobile)
+ // Close menu when a nav link is clicked (mobile)
  navLinks.forEach(link => {
      link.addEventListener('click', () => {
-         // Only hide menu on mobile screens
+         // Only close on mobile screens
          if (window.innerWidth <= 991) {
              hideMenu();
          }
          
          // Remove active class from all links
          navLinks.forEach(l => l.classList.remove('active'));
-         
          // Add active class to clicked link
          link.classList.add('active');
      });
  });
 
- // Hide menu when window is resized to desktop
+ // Close menu on window resize if screen becomes large
  window.addEventListener('resize', () => {
      if (window.innerWidth > 991) {
+         hideMenu();
+     }
+ });
+
+ // Close menu when ESC key is pressed
+ document.addEventListener('keydown', (e) => {
+     if (e.key === 'Escape') {
          hideMenu();
      }
  });
@@ -117,13 +124,6 @@ inputs.forEach(input => {
              });
          }
      });
- });
-
- // Close menu with Escape key
- document.addEventListener('keydown', (e) => {
-     if (e.key === 'Escape' && navMenu.classList.contains('show')) {
-         hideMenu();
-     }
  });
 
 /*=====DOWNLOAD BUTTON ANIMATION ====== */
