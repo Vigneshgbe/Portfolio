@@ -46,53 +46,86 @@ inputs.forEach(input => {
 });
 
 /*===== MENU SHOW =====*/ 
-   // Mobile menu toggle - using your existing structure
-   const navToggle = document.getElementById('nav-toggle');
-   const navMenu = document.getElementById('nav-menu');
-   const navLinks = document.querySelectorAll('.nav__link');
+ // Mobile menu functionality
+ const navToggle = document.getElementById('nav-toggle');
+ const navMenu = document.getElementById('nav-menu');
+ const navClose = document.getElementById('nav-close');
+ const menuBackdrop = document.getElementById('menu-backdrop');
+ const navLinks = document.querySelectorAll('.nav__link');
 
-   // Toggle mobile menu
-   if (navToggle) {
-       navToggle.addEventListener('click', () => {
-           navMenu.classList.toggle('show');
-       });
-   }
+ // Function to show menu
+ function showMenu() {
+     navMenu.classList.add('show');
+     menuBackdrop.classList.add('show');
+     document.body.classList.add('menu-open');
+ }
 
-   // Close mobile menu when clicking on a link
-   navLinks.forEach(link => {
-       link.addEventListener('click', () => {
-           navMenu.classList.remove('show');
-       });
-   });
+ // Function to hide menu
+ function hideMenu() {
+     navMenu.classList.remove('show');
+     menuBackdrop.classList.remove('show');
+     document.body.classList.remove('menu-open');
+ }
 
-   // Active link highlighting
-   navLinks.forEach(link => {
-       link.addEventListener('click', () => {
-           navLinks.forEach(l => l.classList.remove('active'));
-           link.classList.add('active');
-       });
-   });
+ // Show menu when toggle is clicked
+ if (navToggle) {
+     navToggle.addEventListener('click', showMenu);
+ }
 
-   // Close mobile menu when clicking outside
-   document.addEventListener('click', (e) => {
-       if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-           navMenu.classList.remove('show');
-       }
-   });
+ // Hide menu when close button is clicked
+ if (navClose) {
+     navClose.addEventListener('click', hideMenu);
+ }
 
-   // Smooth scrolling for anchor links
-   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-       anchor.addEventListener('click', function (e) {
-           e.preventDefault();
-           const target = document.querySelector(this.getAttribute('href'));
-           if (target) {
-               target.scrollIntoView({
-                   behavior: 'smooth',
-                   block: 'start'
-               });
-           }
-       });
-   });
+ // Hide menu when backdrop is clicked
+ if (menuBackdrop) {
+     menuBackdrop.addEventListener('click', hideMenu);
+ }
+
+ // Hide menu when a nav link is clicked (mobile)
+ navLinks.forEach(link => {
+     link.addEventListener('click', () => {
+         // Only hide menu on mobile screens
+         if (window.innerWidth <= 991) {
+             hideMenu();
+         }
+         
+         // Remove active class from all links
+         navLinks.forEach(l => l.classList.remove('active'));
+         
+         // Add active class to clicked link
+         link.classList.add('active');
+     });
+ });
+
+ // Hide menu when window is resized to desktop
+ window.addEventListener('resize', () => {
+     if (window.innerWidth > 991) {
+         hideMenu();
+     }
+ });
+
+ // Smooth scrolling for anchor links
+ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+     anchor.addEventListener('click', function (e) {
+         e.preventDefault();
+         const target = document.querySelector(this.getAttribute('href'));
+         if (target) {
+             target.scrollIntoView({
+                 behavior: 'smooth',
+                 block: 'start'
+             });
+         }
+     });
+ });
+
+ // Close menu with Escape key
+ document.addEventListener('keydown', (e) => {
+     if (e.key === 'Escape' && navMenu.classList.contains('show')) {
+         hideMenu();
+     }
+ });
+
 /*=====DOWNLOAD BUTTON ANIMATION ====== */
 
 /*--===== CERTIFICATES SLIDER SCRIPT =====--*/
