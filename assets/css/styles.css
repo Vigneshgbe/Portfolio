@@ -1990,9 +1990,10 @@ section.contact,
   .contact__form button,
   .contact__form input[type="submit"] {
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 96% !important;
     min-width: auto !important;
     box-sizing: border-box !important;
+    margin: auto!important;
   }
 
   /* Adjust input sizing for mobile */

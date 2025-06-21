@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/bot.css">
     <!-- <link rel="stylesheet" href="assets/css/extras.css"> -->
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -475,7 +476,70 @@
                 </form>
                 <p id="status-message"></p>
             </div>
-        </section>    
+        </section>   
+        
+        <!-- CHATBOT WIDGECT CONTENT -->
+        <div class="chatbot-container">
+            <div class="help-tooltip" id="helpTooltip">
+                Hey, Need any help?
+                <span class="tooltip-close" onclick="closeTooltip()">&times;</span>
+            </div>
+            
+            <div class="chatbot-icon" onclick="toggleChatbot()">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                </svg>
+            </div>
+
+            <div class="chatbot-popup" id="chatbotPopup">
+                <div class="chatbot-header">
+                    <div class="chatbot-title">Portfolio Assistant</div>
+                    <button class="close-btn" onclick="closeChatbot()">&times;</button>
+                </div>
+                
+                <div class="chatbot-body">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            Hi! I'm here to help you learn more about this portfolio. What would you like to know?
+                        </div>
+                    </div>
+
+                    <div class="typing-indicator" id="typingIndicator">
+                        <div class="typing-dots">
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                        </div>
+                    </div>
+
+                    <div class="quick-questions">
+                        <div class="quick-question" onclick="askQuestion('About the developer')">
+                            👨‍💻 About the developer
+                        </div>
+                        <div class="quick-question" onclick="askQuestion('Skills and technologies')">
+                            🛠️ Skills and technologies
+                        </div>
+                        <div class="quick-question" onclick="askQuestion('Recent projects')">
+                            🚀 Recent projects
+                        </div>
+                        <div class="quick-question" onclick="askQuestion('Contact information')">
+                            📧 Contact information
+                        </div>
+                    </div>
+
+                    <div class="input-area">
+                        <input 
+                            type="text" 
+                            class="chat-input" 
+                            id="chatInput" 
+                            placeholder="Type your question..."
+                            onkeypress="handleKeyPress(event)"
+                        >
+                        <button class="send-btn" onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
   
     </main>
 
@@ -508,6 +572,7 @@
     <!--===== MAIN JS =====-->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/404.js"></script>
+    <script src="/assets/js/bot.js"></script>
 
     <script>
         // ===== EMAIL SENDING FUNCTIONALITY - ENHANCED VERSION =====
