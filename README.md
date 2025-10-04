@@ -52,15 +52,14 @@ portfolio-website/
 ### Installation
 
 1. **Clone the repository**
-```bash
    git clone https://github.com/Sweety-Vigneshg/portfolio-website.git
 
 2. **Navigate to project directory**
-```bash   cd portfolio-website
+   cd portfolio-website
 
 3. **Local Development**
 For local development with live reload:
-```bash # Using VS Code Live Server
+ # Using VS Code Live Server
 1. Install "Live Server" extension
 2. Right-click on index.html
 3. Select "Open with Live Server"
