@@ -117,61 +117,104 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-br from-purple-50 via-white to-blue-50 min-h-screen flex items-center">
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen flex items-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
                 <!-- Text Content -->
-                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 animate-fadeInUp">
-                    <p class="text-purple-600 font-semibold mb-2 text-lg">👋 Hello World</p>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-                        I'm <span class="gradient-text">G Vignesh</span>
+                <div class="md:w-1/2 text-center md:text-left animate-fadeInUp">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 rounded-full mb-4">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <p class="text-indigo-700 font-medium text-sm">Available for opportunities</p>
+                    </div>
+                    
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                        Hi, I'm <span class="gradient-text">G Vignesh</span>
                     </h1>
-                    <p class="text-xl sm:text-2xl text-gray-700 mb-4 font-medium">
-                        Software Engineer | Full Stack Developer | CSE'25
-                    </p>
-                    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto md:mx-0">
-                        Building clean, scalable apps with a strong user experience
+                    
+                    <p class="text-2xl sm:text-3xl text-gray-700 mb-4 font-semibold">
+                        Software Engineer
                     </p>
                     
+                    <p class="text-lg text-gray-600 mb-6 max-w-xl mx-auto md:mx-0 leading-relaxed">
+                        Full Stack Developer specializing in building exceptional digital experiences. 
+                        Currently pursuing CSE'25, passionate about clean code and scalable solutions.
+                    </p>
+                    
+                    <!-- Tech Stack Pills -->
+                    <div class="flex flex-wrap gap-2 mb-8 justify-center md:justify-start">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">React</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">Node.js</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">JavaScript</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Python</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium">MongoDB</span>
+                    </div>
+                    
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#contact" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                            Let's Connect
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
+                        <a href="#contact" class="group bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
-                        <a href="#resume" class="bg-white text-purple-600 border-2 border-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300">
-                            View Resume
+                        <a href="#resume" class="bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-2 border-2 border-gray-200">
+                            <i class="fas fa-file-download"></i>
+                            <span>Download Resume</span>
                         </a>
                     </div> 
                     
                     <!-- Social Links -->
-                    <div class="flex gap-4 mt-8 justify-center md:justify-start">
-                        <a href="https://github.com/Sweety-Vigneshg" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black-600 hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-md">
-                            <i class="fab fa-github text-xl"></i>
+                    <div class="flex gap-3 justify-center md:justify-start">
+                        <a href="https://github.com/Sweety-Vigneshg" target="_blank" class="w-11 h-11 bg-gray-900 rounded-lg flex items-center justify-center text-white hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg">
+                            <i class="fab fa-github text-lg"></i>
                         </a>
-                        <a href="https://linkedin.com/in/vigneshgbe/" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black-600 hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-md">
-                            <i class="fab fa-linkedin-in text-xl"></i>
+                        <a href="https://linkedin.com/in/vigneshgbe/" target="_blank" class="w-11 h-11 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
+                            <i class="fab fa-linkedin-in text-lg"></i>
                         </a>
-                        <a href="mailto:vigneshgbecse@gmail.com" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black-600 hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-md">
-                            <i class="fas fa-envelope text-xl"></i>
+                        <a href="mailto:vigneshgbecse@gmail.com" class="w-11 h-11 bg-red-600 rounded-lg flex items-center justify-center text-white hover:bg-red-700 transition-all duration-300 shadow-md hover:shadow-lg">
+                            <i class="fas fa-envelope text-lg"></i>
                         </a>
-                        <a href="http://wa.me/918525822546" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black-600 hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-md">
-                            <i class="fab fa-whatsapp text-xl"></i>
+                        <a href="http://wa.me/918525822546" class="w-11 h-11 bg-green-600 rounded-lg flex items-center justify-center text-white hover:bg-green-700 transition-all duration-300 shadow-md hover:shadow-lg">
+                            <i class="fab fa-whatsapp text-lg"></i>
                         </a>
                     </div>
                 </div>
                 
-                <!-- Image/Illustration -->
+                <!-- Professional Image/Illustration -->
                 <div class="md:w-1/2 flex justify-center animate-fadeInUp">
                     <div class="relative">
-                        <div class="w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full flex items-center justify-center shadow-2xl">
-                            <i class="fas fa-code text-white text-8xl"></i>
+                        <!-- Main Circle with Code Icon -->
+                        <div class="w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-3xl flex items-center justify-center shadow-2xl relative overflow-hidden">
+                            <!-- Animated Background Pattern -->
+                            <div class="absolute inset-0 opacity-20">
+                                <div class="absolute top-0 left-0 w-full h-full">
+                                    <div class="absolute top-10 left-10 w-20 h-20 border-2 border-white rounded-lg animate-pulse"></div>
+                                    <div class="absolute bottom-10 right-10 w-16 h-16 border-2 border-white rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+                                    <div class="absolute top-1/2 right-20 w-12 h-12 border-2 border-white rounded-lg animate-pulse" style="animation-delay: 1s;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Center Icon -->
+                            <div class="relative z-10 text-center">
+                                <i class="fas fa-laptop-code text-white text-7xl mb-4"></i>
+                                <p class="text-white text-xl font-bold">&lt;/&gt;</p>
+                            </div>
                         </div>
-                        <!-- Floating elements -->
-                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-lg shadow-lg animate-bounce" style="animation-delay: 0.2s; animation-duration: 2s;">
-                            <div class="w-full h-full flex items-center justify-center text-2xl">💻</div>
+                        
+                        <!-- Floating Tech Icons -->
+                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center animate-bounce hover:scale-110 transition-transform" style="animation-duration: 3s;">
+                            <i class="fab fa-react text-blue-500 text-4xl"></i>
                         </div>
-                        <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-green-400 rounded-lg shadow-lg animate-bounce" style="animation-delay: 0.4s; animation-duration: 2s;">
-                            <div class="w-full h-full flex items-center justify-center text-2xl">🚀</div>
+                        
+                        <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center animate-bounce hover:scale-110 transition-transform" style="animation-delay: 0.5s; animation-duration: 3s;">
+                            <i class="fab fa-node-js text-green-600 text-4xl"></i>
+                        </div>
+                        
+                        <div class="absolute top-1/4 -left-8 w-20 h-20 bg-white rounded-2xl shadow-xl flex items-center justify-center animate-bounce hover:scale-110 transition-transform" style="animation-delay: 1s; animation-duration: 3s;">
+                            <i class="fab fa-python text-yellow-500 text-3xl"></i>
+                        </div>
+                        
+                        <div class="absolute bottom-1/4 -right-8 w-20 h-20 bg-white rounded-2xl shadow-xl flex items-center justify-center animate-bounce hover:scale-110 transition-transform" style="animation-delay: 1.5s; animation-duration: 3s;">
+                            <i class="fas fa-database text-green-700 text-3xl"></i>
                         </div>
                     </div>
                 </div>
