@@ -117,185 +117,65 @@
     </nav>
 
     <!-- Hero Section -->
-     <section id="home" class="pt-20 pb-12 md:pt-28 md:pb-16 bg-gradient-to-br from-slate-50 via-white to-purple-50 min-h-screen flex items-center relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-20 left-20 w-72 h-72 bg-purple-600 rounded-full filter blur-3xl"></div>
-            <div class="absolute bottom-20 right-20 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section id="home" class="pt-24 pb-12 md:pt-32 md:pb-20 bg-gradient-to-br from-purple-50 via-white to-blue-50 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
                 <!-- Text Content -->
-                <div class="text-center md:text-left animate-fadeInUp">
-                    
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
-                        Full Stack<br/>
-                        <span class="gradient-text">Software Engineer</span>
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 animate-fadeInUp">
+                    <p class="text-purple-600 font-semibold mb-2 text-lg">👋 Hello World</p>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+                        I'm <span class="gradient-text">G Vignesh</span>
                     </h1>
-                    
-                    <p class="text-lg sm:text-xl text-gray-600 mb-6 max-w-xl mx-auto md:mx-0">
-                        Building scalable web applications with modern technologies. Passionate about clean code, user experience, and innovative solutions.
+                    <p class="text-xl sm:text-2xl text-gray-700 mb-4 font-medium">
+                        Software Engineer | Full Stack Developer | CSE'25
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto md:mx-0">
+                        Building clean, scalable apps with a strong user experience
                     </p>
                     
-                    <!-- Quick Stats -->
-                    <div class="flex flex-wrap gap-6 mb-8 justify-center md:justify-start">
-                        <div class="flex items-center gap-2">
-                            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-graduation-cap text-purple-600"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-xs text-gray-500">Education</p>
-                                <p class="font-semibold text-gray-900">CSE '25</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center gap-2">
-                            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-code text-blue-600"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-xs text-gray-500">Experience</p>
-                                <p class="font-semibold text-gray-900">Full Stack</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center gap-2">
-                            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-map-marker-alt text-green-600"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-xs text-gray-500">Location</p>
-                                <p class="font-semibold text-gray-900">Trichy, IN</p>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 mb-8 justify-center md:justify-start">
-                        <a href="#contact" class="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-                            <span>Get In Touch</span>
-                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Let's Connect
                         </a>
-                        <a href="#resume" class="bg-white text-gray-900 border-2 border-gray-300 px-8 py-4 rounded-xl font-semibold hover:border-purple-600 hover:text-purple-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
-                            <i class="fas fa-file-alt"></i>
-                            <span>View Resume</span>
+                        <a href="#resume" class="bg-white text-purple-600 border-2 border-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300">
+                            View Resume
                         </a>
-                    </div>
-                    
-                    <!-- Tech Stack -->
-                    <div class="mb-8">
-                        <p class="text-sm text-gray-500 mb-3 font-semibold tracking-wide">TECH STACK</p>
-                        <div class="flex flex-wrap gap-3 justify-center md:justify-start">
-                            <span class="tech-badge px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700">
-                                <i class="fab fa-react text-blue-500 mr-2"></i>React
-                            </span>
-                            <span class="tech-badge px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700">
-                                <i class="fab fa-node-js text-green-600 mr-2"></i>Node.js
-                            </span>
-                            <span class="tech-badge px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700">
-                                <i class="fab fa-python text-blue-600 mr-2"></i>Python
-                            </span>
-                            <span class="tech-badge px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700">
-                                <i class="fas fa-database text-orange-500 mr-2"></i>SQL
-                            </span>
-                            <span class="tech-badge px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200 text-sm font-medium text-gray-700">
-                                <i class="fab fa-aws text-yellow-600 mr-2"></i>AWS
-                            </span>
-                        </div>
-                    </div>
+                    </div> 
                     
                     <!-- Social Links -->
-                    <div class="flex gap-3 justify-center md:justify-start">
-                        <a href="https://github.com/Sweety-Vigneshg" target="_blank" class="group w-11 h-11 bg-white rounded-xl flex items-center justify-center text-gray-700 hover:bg-gray-900 hover:text-white transition-all duration-300 shadow-sm border border-gray-200">
-                            <i class="fab fa-github text-lg"></i>
+                    <div class="flex gap-4 mt-8 justify-center md:justify-start">
+                        <a href="https://github.com/Sweety-Vigneshg" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black-600 hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-md">
+                            <i class="fab fa-github text-xl"></i>
                         </a>
-                        <a href="https://linkedin.com/in/vigneshgbe/" target="_blank" class="group w-11 h-11 bg-white rounded-xl flex items-center justify-center text-gray-700 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-sm border border-gray-200">
-                            <i class="fab fa-linkedin-in text-lg"></i>
+                        <a href="https://linkedin.com/in/vigneshgbe/" target="_blank" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black-600 hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-md">
+                            <i class="fab fa-linkedin-in text-xl"></i>
                         </a>
-                        <a href="mailto:vigneshgbecse@gmail.com" class="group w-11 h-11 bg-white rounded-xl flex items-center justify-center text-gray-700 hover:bg-red-500 hover:text-white transition-all duration-300 shadow-sm border border-gray-200">
-                            <i class="fas fa-envelope text-lg"></i>
+                        <a href="mailto:vigneshgbecse@gmail.com" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black-600 hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-md">
+                            <i class="fas fa-envelope text-xl"></i>
                         </a>
-                        <a href="http://wa.me/918525822546" target="_blank" class="group w-11 h-11 bg-white rounded-xl flex items-center justify-center text-gray-700 hover:bg-green-500 hover:text-white transition-all duration-300 shadow-sm border border-gray-200">
-                            <i class="fab fa-whatsapp text-lg"></i>
-                        </a>
-                        <a href="https://www.instagram.com/vigneshgbe/" target="_blank" class="group w-11 h-11 bg-white rounded-xl flex items-center justify-center text-gray-700 hover:bg-pink-500 hover:text-white transition-all duration-300 shadow-sm border border-gray-200">
-                            <i class="fab fa-instagram text-lg"></i>
+                        <a href="http://wa.me/918525822546" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black-600 hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-md">
+                            <i class="fab fa-whatsapp text-xl"></i>
                         </a>
                     </div>
                 </div>
                 
-                <!-- Professional Card/Visual -->
-                <div class="flex justify-center md:justify-end animate-fadeInUp" style="animation-delay: 0.2s;">
+                <!-- Image/Illustration -->
+                <div class="md:w-1/2 flex justify-center animate-fadeInUp">
                     <div class="relative">
-                        <!-- Main Profile Card -->
-                        <div class="profile-card w-80 sm:w-96 p-8 rounded-3xl shadow-2xl border border-gray-100">
-                            <!-- Profile Image Placeholder -->
-                            <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
-                                <i class="fas fa-user-tie text-white text-5xl"></i>
-                            </div>
-                            
-                            <!-- Info Cards -->
-                            <div class="space-y-4">
-                                <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-xl border border-purple-100">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
-                                            <i class="fas fa-laptop-code text-purple-600"></i>
-                                        </div>
-                                        <div class="flex-1">
-                                            <p class="text-xs text-gray-500 font-semibold">Current Focus</p>
-                                            <p class="text-sm font-bold text-gray-900">Full Stack Development</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border border-blue-100">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
-                                            <i class="fas fa-rocket text-blue-600"></i>
-                                        </div>
-                                        <div class="flex-1">
-                                            <p class="text-xs text-gray-500 font-semibold">Projects</p>
-                                            <p class="text-sm font-bold text-gray-900">10+ Completed</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-xl border border-green-100">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
-                                            <i class="fas fa-check-circle text-green-600"></i>
-                                        </div>
-                                        <div class="flex-1">
-                                            <p class="text-xs text-gray-500 font-semibold">Status</p>
-                                            <p class="text-sm font-bold text-green-600 flex items-center gap-2">
-                                                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                                                Open to Opportunities
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full flex items-center justify-center shadow-2xl">
+                            <i class="fas fa-code text-white text-8xl"></i>
                         </div>
-                        
-                        <!-- Floating Elements -->
-                        <div class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-xl flex items-center justify-center animate-float">
-                            <i class="fas fa-code text-white text-2xl"></i>
+                        <!-- Floating elements -->
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-lg shadow-lg animate-bounce" style="animation-delay: 0.2s; animation-duration: 2s;">
+                            <div class="w-full h-full flex items-center justify-center text-2xl">💻</div>
                         </div>
-                        
-                        <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-xl flex items-center justify-center animate-float" style="animation-delay: 0.5s;">
-                            <i class="fas fa-lightbulb text-white text-2xl"></i>
+                        <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-green-400 rounded-lg shadow-lg animate-bounce" style="animation-delay: 0.4s; animation-duration: 2s;">
+                            <div class="w-full h-full flex items-center justify-center text-2xl">🚀</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#about" class="text-gray-400 hover:text-purple-600 transition-colors">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
         </div>
     </section>
 
