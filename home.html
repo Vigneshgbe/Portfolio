@@ -1167,7 +1167,7 @@
         });
 
     
-        // ===== EMAIL SENDING FUNCTIONALITY =====
+// =============== EMAIL SENDING FUNCTIONALITY ====================
         
         // Initialize EmailJS with your public key
         (function() {
@@ -1230,7 +1230,7 @@
             function validateForm(formData) {
                 const errors = [];
                 
-                if (!formData.name || formData.name.trim().length < 2) {
+                if (!formData.name || formData.name.length < 2) {
                     errors.push('Name must be at least 2 characters long');
                 }
                 
@@ -1238,7 +1238,7 @@
                     errors.push('Please enter a valid email address');
                 }
                 
-                if (!formData.message || formData.message.trim().length < 10) {
+                if (!formData.message || formData.message.length < 10) {
                     errors.push('Message must be at least 10 characters long');
                 }
                 
@@ -1250,16 +1250,14 @@
                 e.preventDefault();
                 
                 try {
-                    // Get form data
-                    const nameInput = document.getElementById('name');
-                    const emailInput = document.getElementById('email');
-                    const messageInput = document.getElementById('message');
-                    
+                    // Get form data directly from the form
                     const formData = {
-                        name: nameInput.value.trim(),
-                        email: emailInput.value.trim(),
-                        message: messageInput.value.trim()
+                        name: contactForm.name.value.trim(),
+                        email: contactForm.email.value.trim(),
+                        message: contactForm.message.value.trim()
                     };
+                    
+                    console.log('Form data:', formData); // Debug log
                     
                     // Validate form
                     const validationErrors = validateForm(formData);
@@ -1375,6 +1373,7 @@
             
             console.log('Contact form initialized successfully');
         });
+
     </script>
 </body>
 </html>
