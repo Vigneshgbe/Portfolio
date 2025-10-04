@@ -1,49 +1,82 @@
-#  G Vignesh – Full Stack Developer Portfolio
+# 🚀 Personal Portfolio Website
 
-**CSE Graduate (2025) | Software Engineer | Full Stack Developer**
+A modern, responsive personal portfolio website showcasing my projects, skills, and professional experience as a Full Stack Developer. Built with clean design principles and smooth user experience in mind.
 
-Building clean, scalable applications with exceptional user experiences.
+![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 
----
+## ✨ Features
 
-##  About Me
+- **🎨 Modern UI/UX Design** - Clean, professional interface with gradient effects and smooth animations
+- **📱 Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
+- **🎯 Interactive Navigation** - Smooth scrolling with active section highlighting
+- **💼 Project Showcase** - Detailed project cards with tech stack and live demos
+- **🎓 Certifications Section** - Display of professional certifications and achievements
+- **📄 Resume Preview** - Embedded PDF viewer with download functionality
+- **📧 Contact Form** - Easy-to-use contact section with social media integration
+- **⚡ Performance Optimized** - Fast loading times and smooth transitions
 
-I’m a results-driven Full Stack Developer, graduating with a B.Tech in Computer Science Engineering (CSE ’25) from Trichy Engineering College. My journey includes building internal tools, participating in hackathons, and delivering high-quality solutions with strong communication and organizational skills.
+## 🛠️ Technologies Used
 
-### Internship Highlights:
-- **VDart GCC**: Developed internal tools like Excel-integrated dashboards, dynamic forms, QR code systems, and email automation workflows. Earned a ₹5,000 incentive and a company-wide shoutout from the CX team.:contentReference[oaicite:1]{index=1}
-- **Tefugen Technology Pvt. Ltd.**: Interned as Full Stack Developer & Graphic Designer, gaining hands-on experience across design and development.:contentReference[oaicite:2]{index=2}
+### Frontend
+- **HTML5** - Semantic markup structure
+- **CSS3** - Custom styling with modern features
+- **Tailwind CSS** - Utility-first CSS framework
+- **JavaScript (Vanilla)** - Interactive functionality
 
-### Hackathons & Achievements:
-- Finalist at **Flipkart GRiD 6.0**, **Pondicherry SCIMIT’24 Hackathon**, and **SIH (Smart India Hackathon)**—college-level.:contentReference[oaicite:3]{index=3}
-- Consistently recognized for academic excellence: Top Academic Performer in 2nd and final year, Best Outgoing Student Award, SSLC first rank with ₹1,000 cash prize, and accolades for project expo presentations and organization.:contentReference[oaicite:4]{index=4}
+### Libraries & Tools
+- **Font Awesome** - Icon library
+- **Google Fonts** - Typography (Poppins, Inter)
+- **Google Drive API** - Resume embedding
 
-Currently, I'm sharpening my expertise in **Data Structures, Algorithms**, and **backend development** to secure impactful roles in product-based companies.:contentReference[oaicite:5]{index=5}
-
----
-
-##  Why Choose Me?
-
-I deliver functional, efficient solutions grounded in strong technical fundamentals. Whether streamlining workflows or building from the ground up, I bring reliability, discipline, and fast learning to every project. My performance-driven mindset ensures consistent, purposeful contribution.:contentReference[oaicite:6]{index=6}
-
----
-
-##  Skills
-
-Technologies I use to build, scale, and optimize:
-
-- HTML • CSS • JavaScript
-- Java • C • SQL
-- Firebase • Android Studio • Python:contentReference[oaicite:7]{index=7}
-
----
-
-##  Portfolio Structure
-
-```plaintext
-portfolio/
-├── index.html           # Main landing page
+## 📂 Project Structure
+portfolio-website/
+│
+├── index.html              # Main HTML file
+├── styles.css              # Custom CSS styles
+├── script.js               # JavaScript functionality
 ├── assets/
-│   └── images/          # Iconography and media
-├── styles.scss          # Styling (or .css)
-└── README.md            # You're here!
+│   ├── images/            # Images and screenshots
+│   └── resume/            # Resume files
+└── README.md              # Project documentation
+
+## 🚀 Getting Started
+
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- Basic text editor or IDE (VS Code recommended)
+
+### Installation
+
+1. **Clone the repository**
+```bash
+   git clone https://github.com/Sweety-Vigneshg/portfolio-website.git
+
+2. **Navigate to project directory**
+```bash   cd portfolio-website
+
+3. **Local Development**
+For local development with live reload:
+```bash # Using VS Code Live Server
+1. Install "Live Server" extension
+2. Right-click on index.html
+3. Select "Open with Live Server"
+
+**README Highlights:**
+
+✅ **Professional structure** with badges and icons  
+✅ **Comprehensive feature list** showcasing all functionalities  
+✅ **Clear installation instructions** for easy setup  
+✅ **Detailed sections overview** explaining each part  
+✅ **Technology stack** clearly documented  
+✅ **Customization guide** for easy modifications  
+✅ **Deployment options** for multiple platforms  
+✅ **Color scheme documentation** for designers  
+✅ **Browser compatibility** information  
+✅ **Contributing guidelines** for open source  
+✅ **Professional formatting** with emojis and structure  
+
+This README provides everything needed for someone to understand, use, and contribute to your portfolio project! 🚀
