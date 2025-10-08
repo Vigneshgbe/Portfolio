@@ -32,16 +32,21 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 - **Google Fonts** - Typography (Poppins, Inter)
 - **Google Drive API** - Resume embedding
 
-## 📂 Project Structure
-portfolio-website/
+## 📂 Folder Structure
+
+```
+Resume-Generator/
 │
-├── index.html              # Main HTML file
-├── styles.css              # Custom CSS styles
-├── script.js               # JavaScript functionality
-├── assets/
-│   ├── images/            # Images and screenshots
-│   └── resume/            # Resume files
-└── README.md              # Project documentation
+├── index.html
+├── certificates
+├── pages
+│   ├── resume.html
+├── projects
+├── assets
+├── index.html
+├── index-old.html
+└── README.md
+```
 
 ## 🚀 Getting Started
 
@@ -78,4 +83,3 @@ For local development with live reload:
 ✅ **Contributing guidelines** for open source  
 ✅ **Professional formatting** with emojis and structure  
 
-This README provides everything needed for someone to understand, use, and contribute to your portfolio project! 🚀
