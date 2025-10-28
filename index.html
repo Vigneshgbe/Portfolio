@@ -1316,394 +1316,752 @@
     </section>
 
     <!-- Enhanced Projects Section -->
-    <section id="projects" class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+<section id="projects" class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-20"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <div class="inline-block">
+                <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider mb-2 block">Portfolio Showcase</span>
+                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Here are some of my recent projects that showcase my technical skills
+                </p>
+            </div>
+        </div>
+        
+        <!-- Projects Grid -->
+        <div class="grid lg:grid-cols-2 gap-8">     
+            <!-- Project 1 - Food Delivery Website -->
+            <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                <!-- Project Image/Icon Header -->
+                <div class="relative h-64 bg-gradient-to-br from-orange-500 to-red-500 overflow-hidden">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-utensils text-white text-8xl opacity-90"></i>
+                    </div>
+                    <!-- Overlay Badge -->
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                        <span class="text-sm font-semibold text-orange-600">Web Development</span>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-8">
+                    <!-- Title and Badge -->
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                            Responsive Food Delivery Website
+                        </h3>
+                        <span class="inline-flex items-center px-3 py-1 bg-blue-50 text-blue-700 rounded-lg text-xs font-semibold border border-blue-200">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            Great Stack Web Developer Internship Project
+                        </span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A fully functional food delivery platform developed during a <span class="font-semibold text-gray-800">one-month internship at Great Stack</span>. Built from scratch after learning core web technologies, featuring an intuitive user interface, <span class="font-semibold text-gray-800">dynamic menu system</span>, cart functionality, and responsive design—demonstrating rapid learning and practical application of frontend fundamentals.
+                    </p>
+
+                    <!-- Tech Stack -->
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-code text-purple-600 mr-2"></i>
+                            Technologies Used
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-orange-50 to-red-50 text-orange-700 rounded-lg text-xs font-medium border border-orange-200 hover:shadow-md transition-all">HTML5</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-lg text-xs font-medium border border-blue-200 hover:shadow-md transition-all">CSS3</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-yellow-50 to-orange-50 text-yellow-700 rounded-lg text-xs font-medium border border-yellow-200 hover:shadow-md transition-all">JavaScript</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-lg text-xs font-medium border border-green-200 hover:shadow-md transition-all">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-3 pt-4 border-t border-gray-100">
+                        <a href="https://sweety-vigneshg.github.io/Food-Delivery-Website/" target="_blank" class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-3 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Demo</span>
+                        </a>
+                        <a href="https://github.com/Sweety-Vigneshg/Food-Delivery-Website" target="_blank" class="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-gray-700 px-4 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300">
+                            <i class="fab fa-github"></i>
+                            <span>Source Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 - Employee Leave Management System -->
+            <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                <!-- Project Image/Icon Header -->
+                <div class="relative h-64 bg-gradient-to-br from-teal-500 to-cyan-500 overflow-hidden">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-calendar-check text-white text-8xl opacity-90"></i>
+                    </div>
+                    <!-- Overlay Badge -->
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                        <span class="text-sm font-semibold text-teal-600">Full Stack</span>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-8">
+                    <!-- Title and Badge -->
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
+                            Employee Leave Management System
+                        </h3>
+                        <span class="inline-flex items-center px-3 py-1 bg-green-50 text-green-700 rounded-lg text-xs font-semibold border border-green-200">
+                            <i class="fas fa-briefcase mr-2"></i>
+                            Tefugen Technologies Internship Project
+                        </span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A full-stack workforce management application with <span class="font-semibold text-gray-800">role-based authentication</span> enabling employees to submit leave requests and admins to review, approve, or reject them. Features <span class="font-semibold text-gray-800">real-time status notifications</span>, comprehensive user management, leave history tracking, and <span class="font-semibold text-gray-800">admin dashboard</span> for monitoring all requests—streamlining organizational leave workflows with an intuitive interface.
+                    </p>
+
+                    <!-- Tech Stack -->
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-code text-purple-600 mr-2"></i>
+                            Technologies Used
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-lg text-xs font-medium border border-blue-200 hover:shadow-md transition-all">React</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-green-50 to-lime-50 text-green-700 rounded-lg text-xs font-medium border border-green-200 hover:shadow-md transition-all">Node.js</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-yellow-50 to-orange-50 text-yellow-700 rounded-lg text-xs font-medium border border-yellow-200 hover:shadow-md transition-all">Express.js</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-cyan-50 to-blue-50 text-cyan-700 rounded-lg text-xs font-medium border border-cyan-200 hover:shadow-md transition-all">MySQL</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-lg text-xs font-medium border border-purple-200 hover:shadow-md transition-all">JWT Auth</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 rounded-lg text-xs font-medium border border-teal-200 hover:shadow-md transition-all">REST API</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-3 pt-4 border-t border-gray-100">
+                        <a href="https://github.com/Sweety-Vigneshg/Employee-Leave-Management" target="_blank" class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-4 py-3 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Demo</span>
+                        </a>
+                        <a href="https://github.com/Sweety-Vigneshg/Employee-Leave-Management" target="_blank" class="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-gray-700 px-4 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300">
+                            <i class="fab fa-github"></i>
+                            <span>Source Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 - Padak Brand Management System -->
+            <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                <!-- Project Image/Icon Header -->
+                <div class="relative h-64 bg-gradient-to-br from-indigo-500 to-purple-500 overflow-hidden">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-layer-group text-white text-8xl opacity-90"></i>
+                    </div>
+                    <!-- Overlay Badge -->
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                        <span class="text-sm font-semibold text-indigo-600">Enterprise</span>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-8">
+                    <!-- Title and Badge -->
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                            Padak - Brand Management System
+                        </h3>
+                        <span class="inline-flex items-center px-3 py-1 bg-green-50 text-green-700 rounded-lg text-xs font-semibold border border-green-200">
+                            <i class="fas fa-briefcase mr-2"></i>
+                            VDart GCC Internship Project
+                        </span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A comprehensive full-stack web application featuring <span class="font-semibold text-gray-800">role-based access control</span> and multi-user dashboards for students, professionals, agencies, and businesses. Built with complete <span class="font-semibold text-gray-800">admin panel</span> for managing users, courses, internships, services, applications, and contact messages. Includes <span class="font-semibold text-gray-800">analytics dashboard</span> with real-time insights—designed as a scalable, responsive solution for educational and professional service management.
+                    </p>
+
+                    <!-- Tech Stack -->
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-code text-purple-600 mr-2"></i>
+                            Technologies Used
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-lg text-xs font-medium border border-blue-200 hover:shadow-md transition-all">React</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-green-50 to-lime-50 text-green-700 rounded-lg text-xs font-medium border border-green-200 hover:shadow-md transition-all">Node.js</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-cyan-50 to-blue-50 text-cyan-700 rounded-lg text-xs font-medium border border-cyan-200 hover:shadow-md transition-all">MySQL</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-yellow-50 to-orange-50 text-yellow-700 rounded-lg text-xs font-medium border border-yellow-200 hover:shadow-md transition-all">Express.js</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-lg text-xs font-medium border border-purple-200 hover:shadow-md transition-all">JWT Auth</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 rounded-lg text-xs font-medium border border-indigo-200 hover:shadow-md transition-all">REST API</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-3 pt-4 border-t border-gray-100">
+                        <a href="https://github.com/Sweety-Vigneshg/padak-brand" target="_blank" class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-3 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Demo</span>
+                        </a>
+                        <a href="https://github.com/Sweety-Vigneshg/padak-brand" target="_blank" class="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-gray-700 px-4 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300">
+                            <i class="fab fa-github"></i>
+                            <span>Source Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 - Speech to Sign Language Converter -->
+            <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                <!-- Project Image/Icon Header -->
+                <div class="relative h-64 bg-gradient-to-br from-purple-500 to-pink-500 overflow-hidden">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-hands text-white text-8xl opacity-90"></i>
+                    </div>
+                    <!-- Overlay Badge -->
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                        <span class="text-sm font-semibold text-purple-600">AI/ML</span>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-8">
+                    <!-- Title and Badge -->
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                            Speech to Sign Language Converter
+                        </h3>
+                        <span class="inline-flex items-center px-3 py-1 bg-amber-50 text-amber-700 rounded-lg text-xs font-semibold border border-amber-200">
+                            <i class="fas fa-flask mr-2"></i>
+                            Final Year Project | ML/NLP Application
+                        </span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        An AI-powered accessibility tool that converts <span class="font-semibold text-gray-800">speech to sign language</span> using machine learning and NLP. Trained on comprehensive <span class="font-semibold text-gray-800">ASL/ISL datasets</span>, the system processes spoken words and generates corresponding sign language animations in real-time—bridging communication gaps and promoting inclusivity for the hearing-impaired community.
+                    </p>
+
+                    <!-- Tech Stack -->
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-code text-purple-600 mr-2"></i>
+                            Technologies Used
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-lg text-xs font-medium border border-purple-200 hover:shadow-md transition-all">Python</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-lg text-xs font-medium border border-blue-200 hover:shadow-md transition-all">HTML/CSS</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-lg text-xs font-medium border border-green-200 hover:shadow-md transition-all">Tensorflow</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-pink-50 to-red-50 text-pink-700 rounded-lg text-xs font-medium border border-pink-200 hover:shadow-md transition-all">ML/NLP</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-gray-50 to-slate-50 text-gray-700 rounded-lg text-xs font-medium border border-gray-200 hover:shadow-md transition-all">ASL/ISL Model</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-3 pt-4 border-t border-gray-100">
+                        <a href="https://github.com/Sweety-Vigneshg/speech-to-sign-project" target="_blank" class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-3 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>View Demo</span>
+                        </a>
+                        <a href="https://github.com/Sweety-Vigneshg/speech-to-sign-project" target="_blank" class="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-gray-700 px-4 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300">
+                            <i class="fab fa-github"></i>
+                            <span>Source Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 - VDart CX Overall Team Dashboard -->
+            <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                <!-- Project Image/Icon Header -->
+                <div class="relative h-64 bg-gradient-to-br from-violet-500 to-fuchsia-500 overflow-hidden">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-chart-line text-white text-8xl opacity-90"></i>
+                    </div>
+                    <!-- Overlay Badge -->
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                        <span class="text-sm font-semibold text-violet-600">Enterprise Tool</span>
+                    </div>
+                    <!-- Recognition Badge -->
+                    <div class="absolute bottom-4 left-4 bg-yellow-400/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
+                        <i class="fas fa-trophy text-yellow-900"></i>
+                        <span class="text-sm font-bold text-yellow-900">Performance Incentive</span>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-8">
+                    <!-- Title and Badge -->
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-violet-600 transition-colors">
+                            VDart CX Overall Team Dashboard - Internal Management System
+                        </h3>
+                        <span class="inline-flex items-center px-3 py-1 bg-green-50 text-green-700 rounded-lg text-xs font-semibold border border-green-200">
+                            <i class="fas fa-award mr-2"></i>
+                            Performance Incentive | Company-wide Recognition
+                        </span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A comprehensive enterprise-level internal tool developed during <span class="font-semibold text-gray-800">VDart GCC internship</span>, featuring <span class="font-semibold text-gray-800">Power BI integrated analytics dashboards</span> for multiple roles (CX, CSM, RM, RD). Built with <span class="font-semibold text-gray-800">role-based access control</span>, Excel file upload with automated data extraction, real-time calculations, dynamic graphical visualizations, and <span class="font-semibold text-gray-800">version history with MySQL restore functionality</span>. Includes in-built messenger for manager-employee communication, automated email workflows, form auto-save with undo/redo, team structure infographics, resource file management, and employee exit form system—earning official recognition and shoutout from the CX team.
+                    </p>
+
+                    <!-- Tech Stack -->
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-code text-purple-600 mr-2"></i>
+                            Technologies Used
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-indigo-50 to-blue-50 text-indigo-700 rounded-lg text-xs font-medium border border-indigo-200 hover:shadow-md transition-all">PHP</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-cyan-50 to-blue-50 text-cyan-700 rounded-lg text-xs font-medium border border-cyan-200 hover:shadow-md transition-all">MySQL</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-yellow-50 to-orange-50 text-yellow-700 rounded-lg text-xs font-medium border border-yellow-200 hover:shadow-md transition-all">Power BI</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-orange-50 to-red-50 text-orange-700 rounded-lg text-xs font-medium border border-orange-200 hover:shadow-md transition-all">JavaScript</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-pink-50 to-red-50 text-pink-700 rounded-lg text-xs font-medium border border-pink-200 hover:shadow-md transition-all">Email Automation</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-lg text-xs font-medium border border-purple-200 hover:shadow-md transition-all">Excel Integration</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-lg text-xs font-medium border border-green-200 hover:shadow-md transition-all">Chart.js</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-lg text-xs font-medium border border-blue-200 hover:shadow-md transition-all">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-3 pt-4 border-t border-gray-100">
+                        <a href="#" class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white px-4 py-3 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-award"></i>
+                            <span>Company Recognition</span>
+                        </a>
+                        <a href="#" class="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-gray-700 px-4 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300">
+                            <i class="fas fa-building"></i>
+                            <span>Internal Project</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 - Employee Exit Interview Management System -->
+            <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                <!-- Project Image/Icon Header -->
+                <div class="relative h-64 bg-gradient-to-br from-rose-500 to-pink-500 overflow-hidden">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                        <i class="fas fa-user-times text-white text-8xl opacity-90"></i>
+                    </div>
+                    <!-- Overlay Badge -->
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                        <span class="text-sm font-semibold text-rose-600">HR Tool</span>
+                    </div>
+                    <!-- Speed Badge -->
+                    <div class="absolute bottom-4 left-4 bg-amber-400/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
+                        <i class="fas fa-bolt text-amber-900"></i>
+                        <span class="text-sm font-bold text-amber-900">5 Days Development</span>
+                    </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="p-8">
+                    <!-- Title and Badge -->
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
+                            Employee Exit Interview Management System
+                        </h3>
+                        <span class="inline-flex items-center px-3 py-1 bg-amber-50 text-amber-700 rounded-lg text-xs font-semibold border border-amber-200">
+                            <i class="fas fa-clock mr-2"></i>
+                            Developed in 5 Days | VDart Internal Project
+                        </span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A rapid-development internal tool for <span class="font-semibold text-gray-800">VDart GCC</span> that streamlines employee exit processes through comprehensive feedback collection and analysis. Features <span class="font-semibold text-gray-800">category-wise graphical visualizations</span> using Chart.js, admin dashboard with record exports and email sharing capabilities, <span class="font-semibold text-gray-800">paginated records management</span>, custom feedback forms, query raising system, and in-built messaging for HR-employee communication—delivering a complete exit interview workflow in just 5 Days.
+                    </p>
+
+                    <!-- Tech Stack -->
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-700 mb-3 flex items-center">
+                            <i class="fas fa-code text-purple-600 mr-2"></i>
+                            Technologies Used
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-indigo-50 to-blue-50 text-indigo-700 rounded-lg text-xs font-medium border border-indigo-200 hover:shadow-md transition-all">PHP</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-cyan-50 to-blue-50 text-cyan-700 rounded-lg text-xs font-medium border border-cyan-200 hover:shadow-md transition-all">MySQL</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-red-50 to-pink-50 text-red-700 rounded-lg text-xs font-medium border border-red-200 hover:shadow-md transition-all">Chart.js</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-lg text-xs font-medium border border-blue-200 hover:shadow-md transition-all">Tailwind CSS</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-pink-50 to-red-50 text-pink-700 rounded-lg text-xs font-medium border border-pink-200 hover:shadow-md transition-all">PHPMailer</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-lg text-xs font-medium border border-purple-200 hover:shadow-md transition-all">Data Visualization</span>
+                            <span class="px-3 py-1.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-lg text-xs font-medium border border-green-200 hover:shadow-md transition-all">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-3 pt-4 border-t border-gray-100">
+                        <a href="#" class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-rose-500 to-pink-500 text-white px-4 py-3 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-clock"></i>
+                            <span>Rapid Development</span>
+                        </a>
+                        <a href="#" class="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-gray-700 px-4 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all duration-300">
+                            <i class="fas fa-building"></i>
+                            <span>Internal Project</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Smooth transitions */
+        * {
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Project card hover effects */
+        @keyframes float-project {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Icon scale on hover */
+        .group:hover i.fa-utensils,
+        .group:hover i.fa-calendar-check,
+        .group:hover i.fa-layer-group,
+        .group:hover i.fa-hands,
+        .group:hover i.fa-chart-line,
+        .group:hover i.fa-user-times {
+            animation: float-project 3s ease-in-out infinite;
+        }
+    </style>
+</section>
+
+    <!-- Enhanced Certificates Section -->
+    <section id="certificates" class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         <!-- Background Decoration -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-20"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute top-20 left-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-20 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Section Header -->
             <div class="text-center mb-16">
                 <div class="inline-block">
-                    <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider mb-2 block">Portfolio Showcase</span>
-                    <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                    <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider mb-2 block">Professional Development</span>
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Certificates</h2>
                     <div class="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mb-6"></div>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Here are some of my recent projects that showcase my technical skills
+                        Professional certifications and courses completed
                     </p>
                 </div>
             </div>
             
-            <!-- Projects Grid -->
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-10">     
-                <!-- Project 1 - Food Delivery Website -->
+            <!-- Certificates Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certificate 1 - Microsoft Office 365 -->
                 <div class="group relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-20 transition-all duration-300"></div>
-                    <div class="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                        <!-- Project Image/Icon -->
-                        <div class="relative h-56 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
+                    <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+                        <!-- Certificate Header -->
+                        <div class="relative h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center overflow-hidden">
                             <div class="absolute inset-0 bg-black/10"></div>
+                            <!-- Decorative Elements -->
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                            
                             <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-utensils text-white text-7xl opacity-90"></i>
-                            </div>
-                            <!-- Corner Badge -->
-                            <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                <span class="text-white text-xs font-semibold">Web App</span>
+                                <i class="fas fa-certificate text-white text-6xl opacity-90"></i>
                             </div>
                         </div>
                         
-                        <!-- Project Content -->
-                        <div class="p-8">
-                            <div class="mb-4">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                                    Responsive Food Delivery Website
-                                </h3>
-                                <span class="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-xl text-sm font-semibold border border-blue-200">
+                        <!-- Certificate Content -->
+                        <div class="p-6">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-3">
+                                    <i class="fas fa-award text-blue-600 text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                                        Microsoft Office 365
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-700 font-medium mb-2">Microsoft Office 365 Productivity</p>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                Mastered productivity tools including Word, Excel, PowerPoint, and Teams
+                            </p>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <span class="inline-flex items-center px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-200">
+                                    <i class="fab fa-microsoft mr-2"></i>
+                                    Microsoft
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 - Java for Beginners -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-red-400 to-orange-500 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
+                    <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+                        <!-- Certificate Header -->
+                        <div class="relative h-48 bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0 bg-black/10"></div>
+                            <!-- Decorative Elements -->
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                            
+                            <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
+                                <i class="fab fa-java text-white text-6xl opacity-90"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Certificate Content -->
+                        <div class="p-6">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mr-3">
+                                    <i class="fas fa-award text-red-600 text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">
+                                        Java for Beginners
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-700 font-medium mb-2">Java for Beginners - Udemy</p>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                Complete Java programming course covering core concepts, OOP principles, and application development
+                            </p>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <span class="inline-flex items-center px-3 py-1.5 bg-red-50 text-red-700 rounded-lg text-sm font-medium border border-red-200">
                                     <i class="fas fa-graduation-cap mr-2"></i>
-                                    Great Stack Web Developer Internship Project
+                                    Udemy
                                 </span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 - Public Speaking -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
+                    <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+                        <!-- Certificate Header -->
+                        <div class="relative h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0 bg-black/10"></div>
+                            <!-- Decorative Elements -->
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
                             
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                A fully functional food delivery platform developed during a <span class="font-semibold">one-month internship at Great Stack</span>. Built from scratch after learning core web technologies, featuring an intuitive user interface, <span class="font-semibold">dynamic menu system</span>, cart functionality, and responsive design—demonstrating rapid learning and practical application of frontend fundamentals.
-                            </p>
-                            
-                            <!-- Tech Stack -->
-                            <div class="mb-6">
-                                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Tech Stack</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1.5 bg-orange-100 text-orange-700 rounded-lg text-sm font-medium border border-orange-200">HTML5</span>
-                                    <span class="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium border border-blue-200">CSS3</span>
-                                    <span class="px-3 py-1.5 bg-yellow-100 text-yellow-700 rounded-lg text-sm font-medium border border-yellow-200">JavaScript</span>
-                                    <span class="px-3 py-1.5 bg-green-100 text-green-700 rounded-lg text-sm font-medium border border-green-200">Responsive Design</span>
+                            <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-microphone text-white text-6xl opacity-90"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Certificate Content -->
+                        <div class="p-6">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-3">
+                                    <i class="fas fa-award text-purple-600 text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
+                                        Public Speaking
+                                    </h3>
                                 </div>
                             </div>
                             
-                            <!-- Links -->
-                            <div class="flex gap-4 pt-4 border-t border-gray-100">
-                                <a href="https://vigneshgbe.github.io/Food-Delivery-Website/" 
-                                class="flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors group/link">
-                                    <i class="fas fa-external-link-alt group-hover/link:translate-x-1 transition-transform"></i>
-                                    View Demo
-                                </a>
-                                <a href="https://github.com/Vigneshgbe/Food-Delivery-Website" 
-                                class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-semibold transition-colors group/link">
-                                    <i class="fab fa-github group-hover/link:scale-110 transition-transform"></i>
-                                    Source Code
-                                </a>
+                            <p class="text-gray-700 font-medium mb-2">First Steps Into Public Speaking</p>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                Developed communication and presentation skills for professional settings
+                            </p>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <span class="inline-flex items-center px-3 py-1.5 bg-purple-50 text-purple-700 rounded-lg text-sm font-medium border border-purple-200">
+                                    <i class="fas fa-graduation-cap mr-2"></i>
+                                    Udemy
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 - Employee Leave Management System -->
+                <!-- Certificate 4 - Advanced SEO -->
                 <div class="group relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-3xl blur opacity-0 group-hover:opacity-20 transition-all duration-300"></div>
-                    <div class="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                        <!-- Project Image/Icon -->
-                        <div class="relative h-56 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-teal-500 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
+                    <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+                        <!-- Certificate Header -->
+                        <div class="relative h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center overflow-hidden">
                             <div class="absolute inset-0 bg-black/10"></div>
+                            <!-- Decorative Elements -->
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                            
                             <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-calendar-check text-white text-7xl opacity-90"></i>
-                            </div>
-                            <!-- Corner Badge -->
-                            <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                <span class="text-white text-xs font-semibold">Full Stack</span>
+                                <i class="fas fa-search text-white text-6xl opacity-90"></i>
                             </div>
                         </div>
                         
-                        <!-- Project Content -->
-                        <div class="p-8">
-                            <div class="mb-4">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
-                                    Employee Leave Management System
-                                </h3>
-                                <span class="inline-flex items-center px-4 py-2 bg-green-50 text-green-700 rounded-xl text-sm font-semibold border border-green-200">
-                                    <i class="fas fa-briefcase mr-2"></i>
-                                    Tefugen Technologies Internship Project
-                                </span>
-                            </div>
-                            
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                A full-stack workforce management application with <span class="font-semibold">role-based authentication</span> enabling employees to submit leave requests and admins to review, approve, or reject them. Features <span class="font-semibold">real-time status notifications</span>, comprehensive user management, leave history tracking, and <span class="font-semibold">admin dashboard</span> for monitoring all requests—streamlining organizational leave workflows with an intuitive interface.
-                            </p>
-                            
-                            <!-- Tech Stack -->
-                            <div class="mb-6">
-                                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Tech Stack</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium border border-blue-200">React</span>
-                                    <span class="px-3 py-1.5 bg-lime-100 text-lime-700 rounded-lg text-sm font-medium border border-lime-200">Node.js</span>
-                                    <span class="px-3 py-1.5 bg-yellow-100 text-yellow-700 rounded-lg text-sm font-medium border border-yellow-200">Express.js</span>
-                                    <span class="px-3 py-1.5 bg-cyan-100 text-cyan-700 rounded-lg text-sm font-medium border border-cyan-200">MySQL</span>
-                                    <span class="px-3 py-1.5 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium border border-purple-200">JWT Auth</span>
-                                    <span class="px-3 py-1.5 bg-teal-100 text-teal-700 rounded-lg text-sm font-medium border border-teal-200">REST API</span>
+                        <!-- Certificate Content -->
+                        <div class="p-6">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-3">
+                                    <i class="fas fa-award text-green-600 text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
+                                        Advanced SEO
+                                    </h3>
                                 </div>
                             </div>
                             
-                            <!-- Links -->
-                            <div class="flex gap-4 pt-4 border-t border-gray-100">
-                                <a href="https://github.com/Vigneshgbe/Employee-Leave-Management" 
-                                class="flex items-center gap-2 text-teal-600 hover:text-teal-700 font-semibold transition-colors group/link">
-                                    <i class="fas fa-external-link-alt group-hover/link:translate-x-1 transition-transform"></i>
-                                    View Demo
-                                </a>
-                                <a href="https://github.com/Vigneshgbe/Employee-Leave-Management" 
-                                class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-semibold transition-colors group/link">
-                                    <i class="fab fa-github group-hover/link:scale-110 transition-transform"></i>
-                                    Source Code
-                                </a>
+                            <p class="text-gray-700 font-medium mb-2">Advanced SEO - Udemy</p>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                Advanced search engine optimization techniques, analytics, and digital marketing strategies
+                            </p>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <span class="inline-flex items-center px-3 py-1.5 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200">
+                                    <i class="fas fa-graduation-cap mr-2"></i>
+                                    Udemy
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 - Padak - Brand Management System -->
+                <!-- Certificate 5 - Python Programming -->
                 <div class="group relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-3xl blur opacity-0 group-hover:opacity-20 transition-all duration-300"></div>
-                    <div class="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                        <!-- Project Image/Icon -->
-                        <div class="relative h-56 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
+                    <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+                        <!-- Certificate Header -->
+                        <div class="relative h-48 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center overflow-hidden">
                             <div class="absolute inset-0 bg-black/10"></div>
+                            <!-- Decorative Elements -->
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                            
                             <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-layer-group text-white text-7xl opacity-90"></i>
-                            </div>
-                            <!-- Corner Badge -->
-                            <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                <span class="text-white text-xs font-semibold">Full Stack</span>
+                                <i class="fab fa-python text-white text-6xl opacity-90"></i>
                             </div>
                         </div>
                         
-                        <!-- Project Content -->
-                        <div class="p-8">
-                            <div class="mb-4">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
-                                    Padak - Brand Management System
-                                </h3>
-                                <span class="inline-flex items-center px-4 py-2 bg-green-50 text-green-700 rounded-xl text-sm font-semibold border border-green-200">
-                                    <i class="fas fa-briefcase mr-2"></i>
-                                    VDart GCC Internship Project
-                                </span>
-                            </div>
-                            
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                A comprehensive full-stack web application featuring <span class="font-semibold">role-based access control</span> and multi-user dashboards for students, professionals, agencies, and businesses. Built with complete <span class="font-semibold">admin panel</span> for managing users, courses, internships, services, applications, and contact messages. Includes <span class="font-semibold">analytics dashboard</span> with real-time insights—designed as a scalable, responsive solution for educational and professional service management.
-                            </p>
-                            
-                            <!-- Tech Stack -->
-                            <div class="mb-6">
-                                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Tech Stack</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium border border-blue-200">React</span>
-                                    <span class="px-3 py-1.5 bg-lime-100 text-lime-700 rounded-lg text-sm font-medium border border-lime-200">Node.js</span>
-                                    <span class="px-3 py-1.5 bg-yellow-100 text-yellow-700 rounded-lg text-sm font-medium border border-yellow-200">Express.js</span>
-                                    <span class="px-3 py-1.5 bg-cyan-100 text-cyan-700 rounded-lg text-sm font-medium border border-cyan-200">MySQL</span>
-                                    <span class="px-3 py-1.5 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium border border-purple-200">JWT Auth</span>
-                                    <span class="px-3 py-1.5 bg-indigo-100 text-indigo-700 rounded-lg text-sm font-medium border border-indigo-200">Role-Based Access</span>
-                                    <span class="px-3 py-1.5 bg-teal-100 text-teal-700 rounded-lg text-sm font-medium border border-teal-200">REST API</span>
-                                    <span class="px-3 py-1.5 bg-pink-100 text-pink-700 rounded-lg text-sm font-medium border border-pink-200">Responsive Design</span>
+                        <!-- Certificate Content -->
+                        <div class="p-6">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mr-3">
+                                    <i class="fas fa-award text-orange-600 text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                                        Python Programming
+                                    </h3>
                                 </div>
                             </div>
                             
-                            <!-- Links -->
-                            <div class="flex gap-4 pt-4 border-t border-gray-100">
-                                <a href="https://github.com/Vigneshgbe/Padak-Brand-Management-System" 
-                                class="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-semibold transition-colors group/link">
-                                    <i class="fas fa-external-link-alt group-hover/link:translate-x-1 transition-transform"></i>
-                                    View Demo
-                                </a>
-                                <a href="https://github.com/Vigneshgbe/Padak-Brand-Management-System" 
-                                class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-semibold transition-colors group/link">
-                                    <i class="fab fa-github group-hover/link:scale-110 transition-transform"></i>
-                                    Source Code
-                                </a>
+                            <p class="text-gray-700 font-medium mb-2">Naan Muthalvan - Python</p>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                Comprehensive Python programming course covering fundamentals to advanced concepts
+                            </p>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <span class="inline-flex items-center px-3 py-1.5 bg-orange-50 text-orange-700 rounded-lg text-sm font-medium border border-orange-200">
+                                    <i class="fas fa-certificate mr-2"></i>
+                                    Naan Muthalvan
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 4 - Speech to Sign Language Converter -->
+                <!-- Certificate 6 - Oracle Cloud Infrastructure -->
                 <div class="group relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 rounded-3xl blur opacity-0 group-hover:opacity-20 transition-all duration-300"></div>
-                    <div class="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                        <!-- Project Image/Icon -->
-                        <div class="relative h-56 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
+                    <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+                        <!-- Certificate Header -->
+                        <div class="relative h-48 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center overflow-hidden">
                             <div class="absolute inset-0 bg-black/10"></div>
+                            <!-- Decorative Elements -->
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                            <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                            
                             <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-hands text-white text-7xl opacity-90"></i>
-                            </div>
-                            <!-- Corner Badge -->
-                            <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                <span class="text-white text-xs font-semibold">ML/AI</span>
+                                <i class="fas fa-cloud text-white text-6xl opacity-90"></i>
                             </div>
                         </div>
                         
-                        <!-- Project Content -->
-                        <div class="p-8">
-                            <div class="mb-4">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                                    Speech to Sign Language Converter
-                                </h3>
-                                <span class="inline-flex items-center px-4 py-2 bg-amber-50 text-amber-700 rounded-xl text-sm font-semibold border border-amber-200">
-                                    <i class="fas fa-flask mr-2"></i>
-                                    Mini Project | Academic
-                                </span>
-                            </div>
-                            
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                An AI-powered accessibility tool that converts <span class="font-semibold">real-time speech input into Sign Language animations</span> using advanced <span class="font-semibold">NLP and TensorFlow models</span>. Built with custom-trained ML models for ASL/ISL gesture recognition, the application bridges communication gaps for the hearing-impaired community through <span class="font-semibold">live speech-to-text transcription</span>, automated sign language animation generation, and an intuitive web interface—demonstrating expertise in machine learning and social impact technology.
-                            </p>
-                            
-                            <!-- Tech Stack -->
-                            <div class="mb-6">
-                                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Tech Stack</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1.5 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium border border-purple-200">Python</span>
-                                    <span class="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium border border-blue-200">HTML/CSS</span>
-                                    <span class="px-3 py-1.5 bg-green-100 text-green-700 rounded-lg text-sm font-medium border border-green-200">Tensorflow</span>
-                                    <span class="px-3 py-1.5 bg-pink-100 text-pink-700 rounded-lg text-sm font-medium border border-pink-200">ML/NLP</span>
-                                    <span class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-200">ASL/ISL Model</span>
+                        <!-- Certificate Content -->
+                        <div class="p-6">
+                            <div class="flex items-start mb-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mr-3">
+                                    <i class="fas fa-award text-emerald-600 text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors leading-tight">
+                                        Oracle Cloud Infrastructure Foundations Associate
+                                    </h3>
                                 </div>
                             </div>
                             
-                            <!-- Links -->
-                            <div class="flex gap-4 pt-4 border-t border-gray-100">
-                                <a href="https://github.com/Vigneshgbe/speech-to-sign-project" 
-                                class="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold transition-colors group/link">
-                                    <i class="fas fa-external-link-alt group-hover/link:translate-x-1 transition-transform"></i>
-                                    View Demo
-                                </a>
-                                <a href="https://github.com/Vigneshgbe/speech-to-sign-project" 
-                                class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-semibold transition-colors group/link">
-                                    <i class="fab fa-github group-hover/link:scale-110 transition-transform"></i>
-                                    Source Code
-                                </a>
+                            <p class="text-gray-700 font-medium mb-2">Cloud Infrastructure Foundation - Oracle</p>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                Fundamentals of Oracle Cloud Infrastructure, including core services and security best practices
+                            </p>
+                            
+                            <div class="pt-4 border-t border-gray-100">
+                                <span class="inline-flex items-center px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-lg text-sm font-medium border border-emerald-200">
+                                    <i class="fas fa-cloud mr-2"></i>
+                                    Oracle
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Project 5 - VDart CX Overall Team Dashboard -->
-                <div class="group relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-violet-400 to-fuchsia-500 rounded-3xl blur opacity-0 group-hover:opacity-20 transition-all duration-300"></div>
-                    <div class="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                        <!-- Project Image/Icon -->
-                        <div class="relative h-56 bg-gradient-to-br from-violet-500 to-fuchsia-600 flex items-center justify-center overflow-hidden">
-                            <div class="absolute inset-0 bg-black/10"></div>
-                            <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-chart-line text-white text-7xl opacity-90"></i>
-                            </div>
-                            <!-- Corner Badge -->
-                            <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                <span class="text-white text-xs font-semibold">Enterprise</span>
-                            </div>
+            <!-- Summary Section -->
+            <div class="mt-16 max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl shadow-2xl p-8 text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mb-32"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold mb-2">Continuous Learning</h3>
+                            <p class="text-purple-100">Committed to expanding knowledge and staying current with industry trends</p>
                         </div>
                         
-                        <!-- Project Content -->
-                        <div class="p-8">
-                            <div class="mb-4">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-violet-600 transition-colors">
-                                    VDart CX Overall Team Dashboard - Internal Management System
-                                </h3>
-                                <span class="inline-flex items-center px-4 py-2 bg-green-50 text-green-700 rounded-xl text-sm font-semibold border border-green-200">
-                                    <i class="fas fa-trophy mr-2"></i>
-                                    Performance Incentive | Company-wide Recognition
-                                </span>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold mb-2">6+</div>
+                                <div class="text-sm text-purple-100">Certifications</div>
                             </div>
-                            
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                A comprehensive enterprise-level internal tool developed during <span class="font-semibold">VDart GCC internship</span>, featuring <span class="font-semibold">Power BI integrated analytics dashboards</span> for multiple roles (CX, CSM, RM, RD). Built with <span class="font-semibold">role-based access control</span>, Excel file upload with automated data extraction, real-time calculations, dynamic graphical visualizations, and <span class="font-semibold">version history with MySQL restore functionality</span>. Includes in-built messenger for manager-employee communication, automated email workflows, form auto-save with undo/redo, team structure infographics, resource file management, and employee exit form system—earning official recognition and shoutout from the CX team.
-                            </p>
-                            
-                            <!-- Tech Stack -->
-                            <div class="mb-6">
-                                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Tech Stack</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1.5 bg-indigo-100 text-indigo-700 rounded-lg text-sm font-medium border border-indigo-200">PHP</span>
-                                    <span class="px-3 py-1.5 bg-cyan-100 text-cyan-700 rounded-lg text-sm font-medium border border-cyan-200">MySQL</span>
-                                    <span class="px-3 py-1.5 bg-yellow-100 text-yellow-700 rounded-lg text-sm font-medium border border-yellow-200">Power BI</span>
-                                    <span class="px-3 py-1.5 bg-orange-100 text-orange-700 rounded-lg text-sm font-medium border border-orange-200">JavaScript</span>
-                                    <span class="px-3 py-1.5 bg-pink-100 text-pink-700 rounded-lg text-sm font-medium border border-pink-200">Email Automation</span>
-                                    <span class="px-3 py-1.5 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium border border-purple-200">Excel Integration</span>
-                                    <span class="px-3 py-1.5 bg-green-100 text-green-700 rounded-lg text-sm font-medium border border-green-200">Chart.js</span>
-                                    <span class="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium border border-blue-200">Responsive Design</span>
-                                </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold mb-2">5+</div>
+                                <div class="text-sm text-purple-100">Platforms</div>
                             </div>
-                            
-                            <!-- Links -->
-                            <div class="flex gap-4 pt-4 border-t border-gray-100">
-                                <a href="#" 
-                                class="flex items-center gap-2 text-violet-600 hover:text-violet-700 font-semibold transition-colors group/link">
-                                    <i class="fas fa-award group-hover/link:scale-110 transition-transform"></i>
-                                    Company Recognition
-                                </a>
-                                <a href="#" 
-                                class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-semibold transition-colors group/link">
-                                    <i class="fas fa-building group-hover/link:scale-110 transition-transform"></i>
-                                    Internal Project
-                                </a>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold mb-2">100+</div>
+                                <div class="text-sm text-purple-100">Learning Hours</div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 - Employee Exit Interview Management System -->
-                <div class="group relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-rose-400 to-pink-500 rounded-3xl blur opacity-0 group-hover:opacity-20 transition-all duration-300"></div>
-                    <div class="relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                        <!-- Project Image/Icon -->
-                        <div class="relative h-56 bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center overflow-hidden">
-                            <div class="absolute inset-0 bg-black/10"></div>
-                            <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                                <i class="fas fa-user-times text-white text-7xl opacity-90"></i>
-                            </div>
-                            <!-- Corner Badge -->
-                            <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                <span class="text-white text-xs font-semibold">Full Stack</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Project Content -->
-                        <div class="p-8">
-                            <div class="mb-4">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
-                                    Employee Exit Interview Management System
-                                </h3>
-                                <span class="inline-flex items-center px-4 py-2 bg-amber-50 text-amber-700 rounded-xl text-sm font-semibold border border-amber-200">
-                                    <i class="fas fa-bolt mr-2"></i>
-                                    Developed in 5 Days | VDart Internal Project
-                                </span>
-                            </div>
-                            
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                A rapid-development internal tool for <span class="font-semibold">VDart GCC</span> that streamlines employee exit processes through comprehensive feedback collection and analysis. Features <span class="font-semibold">category-wise graphical visualizations</span> using Chart.js, admin dashboard with record exports and email sharing capabilities, <span class="font-semibold">paginated records management</span>, custom feedback forms, query raising system, and in-built messaging for HR-employee communication—delivering a complete exit interview workflow in just 5 Days.
-                            </p>
-                            
-                            <!-- Tech Stack -->
-                            <div class="mb-6">
-                                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Tech Stack</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1.5 bg-indigo-100 text-indigo-700 rounded-lg text-sm font-medium border border-indigo-200">PHP</span>
-                                    <span class="px-3 py-1.5 bg-cyan-100 text-cyan-700 rounded-lg text-sm font-medium border border-cyan-200">MySQL</span>
-                                    <span class="px-3 py-1.5 bg-red-100 text-red-700 rounded-lg text-sm font-medium border border-red-200">Chart.js</span>
-                                    <span class="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-lg text-sm font-medium border border-blue-200">Tailwind CSS</span>
-                                    <span class="px-3 py-1.5 bg-pink-100 text-pink-700 rounded-lg text-sm font-medium border border-pink-200">PHPMailer</span>
-                                    <span class="px-3 py-1.5 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium border border-purple-200">Data Visualization</span>
-                                    <span class="px-3 py-1.5 bg-green-100 text-green-700 rounded-lg text-sm font-medium border border-green-200">Responsive Design</span>
-                                </div>
-                            </div>
-                            
-                            <!-- Links -->
-                            <div class="flex gap-4 pt-4 border-t border-gray-100">
-                                <a href="#" 
-                                class="flex items-center gap-2 text-rose-600 hover:text-rose-700 font-semibold transition-colors group/link">
-                                    <i class="fas fa-clock group-hover/link:scale-110 transition-transform"></i>
-                                    Rapid Development
-                                </a>
-                                <a href="#" 
-                                class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-semibold transition-colors group/link">
-                                    <i class="fas fa-building group-hover/link:scale-110 transition-transform"></i>
-                                    Internal Project
-                                </a>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold mb-2">∞</div>
+                                <div class="text-sm text-purple-100">Growth Mindset</div>
                             </div>
                         </div>
                     </div>
@@ -1717,8 +2075,8 @@
                 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             }
 
-            /* Hover effects for icons */
-            @keyframes float-icon {
+            /* Icon hover animation */
+            @keyframes certificate-float {
                 0%, 100% {
                     transform: translateY(0px) scale(1);
                 }
@@ -1728,345 +2086,6 @@
             }
         </style>
     </section>
-
-    <!-- Enhanced Certificates Section -->
-<section id="certificates" class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-    <!-- Background Decoration -->
-    <div class="absolute top-20 left-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-20"></div>
-    <div class="absolute bottom-20 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <!-- Section Header -->
-        <div class="text-center mb-16">
-            <div class="inline-block">
-                <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider mb-2 block">Professional Development</span>
-                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Certificates</h2>
-                <div class="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mb-6"></div>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Professional certifications and courses completed
-                </p>
-            </div>
-        </div>
-        
-        <!-- Certificates Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Certificate 1 - Microsoft Office 365 -->
-            <div class="group relative">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
-                <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                    <!-- Certificate Header -->
-                    <div class="relative h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center overflow-hidden">
-                        <div class="absolute inset-0 bg-black/10"></div>
-                        <!-- Decorative Elements -->
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
-                        
-                        <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-certificate text-white text-6xl opacity-90"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- Certificate Content -->
-                    <div class="p-6">
-                        <div class="flex items-start mb-4">
-                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-3">
-                                <i class="fas fa-award text-blue-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                                    Microsoft Office 365
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-700 font-medium mb-2">Microsoft Office 365 Productivity</p>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                            Mastered productivity tools including Word, Excel, PowerPoint, and Teams
-                        </p>
-                        
-                        <div class="pt-4 border-t border-gray-100">
-                            <span class="inline-flex items-center px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-200">
-                                <i class="fab fa-microsoft mr-2"></i>
-                                Microsoft
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificate 2 - Java for Beginners -->
-            <div class="group relative">
-                <div class="absolute inset-0 bg-gradient-to-br from-red-400 to-orange-500 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
-                <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                    <!-- Certificate Header -->
-                    <div class="relative h-48 bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center overflow-hidden">
-                        <div class="absolute inset-0 bg-black/10"></div>
-                        <!-- Decorative Elements -->
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
-                        
-                        <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                            <i class="fab fa-java text-white text-6xl opacity-90"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- Certificate Content -->
-                    <div class="p-6">
-                        <div class="flex items-start mb-4">
-                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mr-3">
-                                <i class="fas fa-award text-red-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">
-                                    Java for Beginners
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-700 font-medium mb-2">Java for Beginners - Udemy</p>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                            Complete Java programming course covering core concepts, OOP principles, and application development
-                        </p>
-                        
-                        <div class="pt-4 border-t border-gray-100">
-                            <span class="inline-flex items-center px-3 py-1.5 bg-red-50 text-red-700 rounded-lg text-sm font-medium border border-red-200">
-                                <i class="fas fa-graduation-cap mr-2"></i>
-                                Udemy
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Certificate 3 - Public Speaking -->
-            <div class="group relative">
-                <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
-                <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                    <!-- Certificate Header -->
-                    <div class="relative h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center overflow-hidden">
-                        <div class="absolute inset-0 bg-black/10"></div>
-                        <!-- Decorative Elements -->
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
-                        
-                        <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-microphone text-white text-6xl opacity-90"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- Certificate Content -->
-                    <div class="p-6">
-                        <div class="flex items-start mb-4">
-                            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-3">
-                                <i class="fas fa-award text-purple-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
-                                    Public Speaking
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-700 font-medium mb-2">First Steps Into Public Speaking</p>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                            Developed communication and presentation skills for professional settings
-                        </p>
-                        
-                        <div class="pt-4 border-t border-gray-100">
-                            <span class="inline-flex items-center px-3 py-1.5 bg-purple-50 text-purple-700 rounded-lg text-sm font-medium border border-purple-200">
-                                <i class="fas fa-graduation-cap mr-2"></i>
-                                Udemy
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificate 4 - Advanced SEO -->
-            <div class="group relative">
-                <div class="absolute inset-0 bg-gradient-to-br from-green-400 to-teal-500 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
-                <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                    <!-- Certificate Header -->
-                    <div class="relative h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center overflow-hidden">
-                        <div class="absolute inset-0 bg-black/10"></div>
-                        <!-- Decorative Elements -->
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
-                        
-                        <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-search text-white text-6xl opacity-90"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- Certificate Content -->
-                    <div class="p-6">
-                        <div class="flex items-start mb-4">
-                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-3">
-                                <i class="fas fa-award text-green-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
-                                    Advanced SEO
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-700 font-medium mb-2">Advanced SEO - Udemy</p>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                            Advanced search engine optimization techniques, analytics, and digital marketing strategies
-                        </p>
-                        
-                        <div class="pt-4 border-t border-gray-100">
-                            <span class="inline-flex items-center px-3 py-1.5 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-200">
-                                <i class="fas fa-graduation-cap mr-2"></i>
-                                Udemy
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificate 5 - Python Programming -->
-            <div class="group relative">
-                <div class="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
-                <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                    <!-- Certificate Header -->
-                    <div class="relative h-48 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center overflow-hidden">
-                        <div class="absolute inset-0 bg-black/10"></div>
-                        <!-- Decorative Elements -->
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
-                        
-                        <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                            <i class="fab fa-python text-white text-6xl opacity-90"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- Certificate Content -->
-                    <div class="p-6">
-                        <div class="flex items-start mb-4">
-                            <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mr-3">
-                                <i class="fas fa-award text-orange-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
-                                    Python Programming
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-700 font-medium mb-2">Naan Muthalvan - Python</p>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                            Comprehensive Python programming course covering fundamentals to advanced concepts
-                        </p>
-                        
-                        <div class="pt-4 border-t border-gray-100">
-                            <span class="inline-flex items-center px-3 py-1.5 bg-orange-50 text-orange-700 rounded-lg text-sm font-medium border border-orange-200">
-                                <i class="fas fa-certificate mr-2"></i>
-                                Naan Muthalvan
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificate 6 - Oracle Cloud Infrastructure -->
-            <div class="group relative">
-                <div class="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl blur opacity-0 group-hover:opacity-25 transition-all duration-300"></div>
-                <div class="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
-                    <!-- Certificate Header -->
-                    <div class="relative h-48 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center overflow-hidden">
-                        <div class="absolute inset-0 bg-black/10"></div>
-                        <!-- Decorative Elements -->
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
-                        
-                        <div class="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-cloud text-white text-6xl opacity-90"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- Certificate Content -->
-                    <div class="p-6">
-                        <div class="flex items-start mb-4">
-                            <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mr-3">
-                                <i class="fas fa-award text-emerald-600 text-xl"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors leading-tight">
-                                    Oracle Cloud Infrastructure Foundations Associate
-                                </h3>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-700 font-medium mb-2">Cloud Infrastructure Foundation - Oracle</p>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                            Fundamentals of Oracle Cloud Infrastructure, including core services and security best practices
-                        </p>
-                        
-                        <div class="pt-4 border-t border-gray-100">
-                            <span class="inline-flex items-center px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-lg text-sm font-medium border border-emerald-200">
-                                <i class="fas fa-cloud mr-2"></i>
-                                Oracle
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Summary Section -->
-        <div class="mt-16 max-w-4xl mx-auto">
-            <div class="bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl shadow-2xl p-8 text-white relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
-                <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mb-32"></div>
-                
-                <div class="relative z-10">
-                    <div class="text-center mb-8">
-                        <h3 class="text-2xl font-bold mb-2">Continuous Learning</h3>
-                        <p class="text-purple-100">Committed to expanding knowledge and staying current with industry trends</p>
-                    </div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">6+</div>
-                            <div class="text-sm text-purple-100">Certifications</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">5+</div>
-                            <div class="text-sm text-purple-100">Platforms</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">100+</div>
-                            <div class="text-sm text-purple-100">Learning Hours</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold mb-2">∞</div>
-                            <div class="text-sm text-purple-100">Growth Mindset</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <style>
-        /* Smooth transitions */
-        * {
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Icon hover animation */
-        @keyframes certificate-float {
-            0%, 100% {
-                transform: translateY(0px) scale(1);
-            }
-            50% {
-                transform: translateY(-10px) scale(1.1);
-            }
-        }
-    </style>
-</section>
 
    <!-- Resume Section -->
     <section id="resume" id="resume-section" class="py-20 bg-white">
