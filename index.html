@@ -762,75 +762,238 @@
         </style>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-16 md:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Education</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto"></div>
+    <!-- Enhanced Education Section -->
+<section id="education" class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-20"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <div class="inline-block">
+                <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider mb-2 block">Academic Journey</span>
+                <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Education</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full"></div>
             </div>
-            
-            <div class="space-y-8 max-w-4xl mx-auto">
-                <!-- Bachelor's Degree -->
-                <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-6 md:p-8 rounded-xl shadow-lg card-hover">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                                B.E. Computer Science & Engineering
-                            </h3>
-                            <p class="text-lg text-purple-600 font-semibold">
-                                Trichy Engineering College
-                            </p>
+        </div>
+        
+        <div class="space-y-12 max-w-5xl mx-auto relative">
+            <!-- Timeline Line -->
+            <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-300 via-blue-300 to-purple-300 transform -translate-x-1/2"></div>
+
+            <!-- Bachelor's Degree -->
+            <div class="relative">
+                <!-- Timeline Dot -->
+                <div class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full transform -translate-x-1/2 shadow-lg z-10 border-4 border-white">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 animate-ping opacity-75"></div>
+                </div>
+
+                <div class="md:ml-auto md:w-[calc(50%-40px)] group">
+                    <div class="relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                        <!-- Decorative Header -->
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-100 to-blue-100 rounded-full -mr-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                        
+                        <!-- Icon Badge -->
+                        <div class="absolute -left-6 top-6 md:left-auto md:-right-6 w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                            <i class="fas fa-graduation-cap text-white text-2xl"></i>
                         </div>
-                        <div class="mt-4 md:mt-0 text-left md:text-right">
-                            <p class="text-gray-700 font-semibold">2021 - 2025</p>
-                            <p class="text-2xl font-bold text-purple-600">CGPA: 8.2/10</p>
+
+                        <div class="p-8 pl-14 md:pl-8">
+                            <!-- Degree Info -->
+                            <div class="mb-6">
+                                <div class="flex items-start justify-between flex-wrap gap-4 mb-3">
+                                    <div class="flex-1">
+                                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-tight">
+                                            B.E. Computer Science & Engineering
+                                        </h3>
+                                        <p class="text-lg text-purple-600 font-semibold flex items-center gap-2">
+                                            <i class="fas fa-university text-sm"></i>
+                                            Trichy Engineering College
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Date and CGPA -->
+                                <div class="flex flex-wrap gap-4 items-center mt-4">
+                                    <div class="flex items-center gap-2 px-4 py-2 bg-purple-50 rounded-lg border border-purple-100">
+                                        <i class="fas fa-calendar-alt text-purple-600"></i>
+                                        <span class="text-gray-700 font-semibold">2021 - 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg shadow-md">
+                                        <i class="fas fa-star text-white"></i>
+                                        <span class="text-white font-bold text-lg">CGPA: 8.2/10</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Achievements -->
+                            <div class="border-t border-gray-200 pt-6">
+                                <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4 flex items-center gap-2">
+                                    <i class="fas fa-trophy text-yellow-500"></i>
+                                    Achievements & Highlights
+                                </h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start group/item">
+                                        <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform">
+                                            <i class="fas fa-check text-white text-sm"></i>
+                                        </div>
+                                        <span class="text-gray-700 leading-relaxed">
+                                            <span class="font-semibold text-gray-900">Best Outgoing Student Award</span>
+                                        </span>
+                                    </li>
+                                    <li class="flex items-start group/item">
+                                        <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform">
+                                            <i class="fas fa-check text-white text-sm"></i>
+                                        </div>
+                                        <span class="text-gray-700 leading-relaxed">
+                                            <span class="font-semibold text-gray-900">Top Academic Performer</span> (2nd and Final Year)
+                                        </span>
+                                    </li>
+                                    <li class="flex items-start group/item">
+                                        <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform">
+                                            <i class="fas fa-check text-white text-sm"></i>
+                                        </div>
+                                        <span class="text-gray-700 leading-relaxed">
+                                            Active participant in technical workshops and hackathons
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="border-t border-purple-200 pt-4">
-                        <ul class="space-y-2 text-gray-700">
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                <span>Best Outgoing Student Award</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                <span>Top Academic Performer</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                <span>Active participant in technical workshops and hackathons</span>
-                            </li>
-                        </ul>
+
+                        <!-- Decorative Corner -->
+                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-blue-100 to-purple-100 rounded-full -ml-12 -mb-12 opacity-50"></div>
                     </div>
                 </div>
-                
-                <!-- Higher Secondary -->
-                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-6 md:p-8 rounded-xl shadow-lg card-hover">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                                Higher Secondary Schooling
-                            </h3>
-                            <p class="text-lg text-blue-600 font-semibold">
-                                Thonthai Hans Roever HSS
-                            </p>
+            </div>
+            
+            <!-- Higher Secondary -->
+            <div class="relative">
+                <!-- Timeline Dot -->
+                <div class="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full transform -translate-x-1/2 shadow-lg z-10 border-4 border-white"></div>
+
+                <div class="md:mr-auto md:w-[calc(50%-40px)] group">
+                    <div class="relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                        <!-- Decorative Header -->
+                        <div class="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full -ml-16 -mt-16 opacity-50 group-hover:scale-150 transition-transform duration-500"></div>
+                        
+                        <!-- Icon Badge -->
+                        <div class="absolute -left-6 top-6 md:left-auto md:-right-6 w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl shadow-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                            <i class="fas fa-school text-white text-2xl"></i>
                         </div>
-                        <div class="mt-4 md:mt-0 text-left md:text-right">
-                            <p class="text-gray-700 font-semibold">2019 - 2020</p>
-                            <p class="text-2xl font-bold text-blue-600">80%</p>
+
+                        <div class="p-8 pl-14 md:pl-8">
+                            <!-- Degree Info -->
+                            <div class="mb-6">
+                                <div class="flex items-start justify-between flex-wrap gap-4 mb-3">
+                                    <div class="flex-1">
+                                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 leading-tight">
+                                            Higher Secondary Schooling
+                                        </h3>
+                                        <p class="text-lg text-blue-600 font-semibold flex items-center gap-2">
+                                            <i class="fas fa-school text-sm"></i>
+                                            Thonthai Hans Roever HSS
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Date and Percentage -->
+                                <div class="flex flex-wrap gap-4 items-center mt-4">
+                                    <div class="flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-lg border border-blue-100">
+                                        <i class="fas fa-calendar-alt text-blue-600"></i>
+                                        <span class="text-gray-700 font-semibold">2019 - 2020</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-md">
+                                        <i class="fas fa-star text-white"></i>
+                                        <span class="text-white font-bold text-lg">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Foundation Info -->
+                            <div class="border-t border-gray-200 pt-6">
+                                <div class="flex items-start gap-3 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
+                                    <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-graduation-cap text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-gray-700 leading-relaxed">
+                                            <span class="font-semibold text-gray-900">Strong foundation</span> in mathematics and science, preparing for advanced engineering studies
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Decorative Corner -->
+                        <div class="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-indigo-100 to-blue-100 rounded-full -mr-12 -mb-12 opacity-50"></div>
                     </div>
-                    <div class="border-t border-blue-200 pt-4">
-                        <p class="text-gray-700">
-                            <i class="fas fa-graduation-cap text-blue-500 mr-2"></i>
-                            Strong foundation in mathematics and science
-                        </p>
+                </div>
+            </div>
+
+            <!-- Timeline End Cap -->
+            <div class="hidden md:flex justify-center relative">
+                <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full shadow-lg flex items-center justify-center">
+                    <i class="fas fa-flag-checkered text-white"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Summary -->
+        <div class="mt-16 max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                    <div class="group">
+                        <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <i class="fas fa-calendar-check text-white text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 mb-1">4 Years</div>
+                        <div class="text-gray-600 font-medium">Engineering Degree</div>
+                    </div>
+                    <div class="group">
+                        <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <i class="fas fa-trophy text-white text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 mb-1">2+</div>
+                        <div class="text-gray-600 font-medium">Major Awards</div>
+                    </div>
+                    <div class="group">
+                        <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                            <i class="fas fa-code text-white text-2xl"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 mb-1">10+</div>
+                        <div class="text-gray-600 font-medium">Technical Events</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <style>
+        /* Ping animation for active timeline dot */
+        @keyframes ping {
+            75%, 100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        .animate-ping {
+            animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        /* Smooth transitions */
+        * {
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Additional hover effects */
+        .group:hover .absolute.rounded-full {
+            transform: scale(1.1);
+        }
+    </style>
+</section>
 
     <!-- Achievements Section -->
     <section id="achievements" class="py-16 md:py-24 bg-gray-50">
